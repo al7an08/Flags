@@ -48,3 +48,33 @@
   width: 24px;
   height: 24px;
 }
+
+.questionPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.answers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.anwsers-row {
+  position: static;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+
+.button {
+  margin: 50px 50px;
+  height: 1000px;
+}
+
+
+.questionSection {
+  box-sizing: border-box;
+}

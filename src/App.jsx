@@ -7,7 +7,9 @@ import {
 
 import "./App.css";
 import { TaskList } from './pages/TaskList';
+import Question from "./components/Question";
 
+import QuestionPage from "./pages/QuestionPage";
 
 const initializeAssistant = (getState/*: any*/) => {
   if (process.env.NODE_ENV === "development") {
@@ -32,7 +34,7 @@ export class App extends React.Component {
       notes: [],
     }
 
-    this.assistant = initializeAssistant(() => this.getStateForAssistant() );
+    this.assistant = initializeAssistant(() => this.getStateForAssistant());
     this.assistant.on("data", (event/*: any*/) => {
       console.log(`assistant.on(data)`, event);
       const { action } = event
@@ -48,7 +50,7 @@ export class App extends React.Component {
     console.log('componentDidMount');
   }
 
-  getStateForAssistant () {
+  getStateForAssistant() {
     console.log('getStateForAssistant: this.state:', this.state)
     const state = {
       item_selector: {
@@ -65,7 +67,7 @@ export class App extends React.Component {
     return state;
   }
 
-  dispatchAssistantAction (action) {
+  dispatchAssistantAction(action) {
     console.log('dispatchAssistantAction', action);
     if (action) {
       switch (action.type) {
@@ -84,32 +86,32 @@ export class App extends React.Component {
     }
   }
 
-  add_note (action) {
+  add_note(action) {
     console.log('add_note', action);
     this.setState({
       notes: [
         ...this.state.notes,
         {
-          id:        Math.random().toString(36).substring(7),
-          title:     action.note,
+          id: Math.random().toString(36).substring(7),
+          title: action.note,
           completed: false,
         },
       ],
     })
   }
 
-  done_note (action) {
+  done_note(action) {
     console.log('done_note', action);
     this.setState({
       notes: this.state.notes.map((note) =>
         (note.id === action.id)
-        ? { ...note, completed: !note.completed }
-        : note
+          ? { ...note, completed: !note.completed }
+          : note
       ),
     })
   }
 
-  delete_note (action) {
+  delete_note(action) {
     console.log('delete_note', action);
     this.setState({
       notes: this.state.notes.filter(({ id }) => id !== action.id),
@@ -119,11 +121,14 @@ export class App extends React.Component {
   render() {
     console.log('render');
     return (
-      <TaskList
-        items  = {this.state.notes}
-        onAdd  = {(note) => { this.add_note({ type: "add_note", note }); }}
-        onDone = {(note) => { this.done_note({ type: "done_note", id: note.id }) }}
-      />
+      <>
+        {/* <TaskList
+          items={this.state.notes}
+          onAdd={(note) => { this.add_note({ type: "add_note", note }); }}
+          onDone={(note) => { this.done_note({ type: "done_note", id: note.id }) }}
+        /> */}
+        <QuestionPage countryImage={'/images/ca.png'} answers={['Russia', 'Canada', 'UK', 'Vietnam']} correctAnswer={1} ></QuestionPage>
+      </>
     )
   }
 
