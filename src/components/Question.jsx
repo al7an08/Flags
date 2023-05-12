@@ -6,20 +6,17 @@ const Question = (props) => {
     return (
         <div className='questionSection'>
             <img style={{
-                height: '33vh'
+                height: '33vh', margin: '0 auto'
             }} src={countryImage} />
             <div className='answers' alt='' >
-                <div className="answer-row">
-                    <Button size='l' className='button' text={answers[0]}></Button>
-                    <Button size='l' className='button' text={answers[1]}></Button>
-                </div>
-                <div className="answer-row">
-                    <Button size='l' className='button' text={answers[2]}></Button>
-                    <Button size='l' className='button' text={answers[3]}></Button>
-                </div>
+                <button size='l' className='button' >{answers[0]}</button>
+                <button size='l' className='button' >{answers[1]}</button>
+                <button size='l' className='button' >{answers[2]}</button>
+                <button size='l' className='button' >{answers[3]}</button>
             </div>
         </div>
     )
 }
+
 
 export default Question

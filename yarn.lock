@@ -2506,6 +2506,11 @@
     "@webassemblyjs/ast" "1.11.5"
     "@xtuc/long" "4.2.2"
 
+"@webpack-cli/serve@^1.6.1":
+  version "1.7.0"
+  resolved "https://registry.npmjs.org/@webpack-cli/serve/-/serve-1.7.0.tgz"
+  integrity sha512-oxnCNGj88fL+xzV+dacXs44HcDwf1ovs3AuEzvP7mqXw7fQntqIhQ1BRmynh4qEKQSSSRSWVyXRjmTbZIX9V2Q==
+
 "@xtuc/ieee754@^1.2.0":
   version "1.2.0"
   resolved "https://registry.npmjs.org/@xtuc/ieee754/-/ieee754-1.2.0.tgz"
@@ -3981,6 +3986,11 @@ domhandler@^4.0.0, domhandler@^4.2.0, domhandler@^4.3.1:
   dependencies:
     domelementtype "^2.2.0"
 
+dompurify@^2.0.8:
+  version "2.4.5"
+  resolved "https://registry.npmjs.org/dompurify/-/dompurify-2.4.5.tgz"
+  integrity sha512-jggCCd+8Iqp4Tsz0nIvpcb22InKEBrGz5dw3EQJMs8HPJDsKbFIO3STYtAvCfDx26Muevn1MHVI0XxjgFfmiSA==
+
 domutils@^1.7.0:
   version "1.7.0"
   resolved "https://registry.npmjs.org/domutils/-/domutils-1.7.0.tgz"
@@ -5191,6 +5201,11 @@ human-signals@^2.1.0:
   version "2.1.0"
   resolved "https://registry.npmjs.org/human-signals/-/human-signals-2.1.0.tgz"
   integrity sha512-B4FFZ6q/T2jhhksgkbEW3HBvWIfDW85snkQgawt07S7J5QXTk6BkNV+0yAeZrM5QpMAdYlocGoljn0sJ/WQkFw==
+
+i@^0.3.7:
+  version "0.3.7"
+  resolved "https://registry.npmjs.org/i/-/i-0.3.7.tgz"
+  integrity sha512-FYz4wlXgkQwIPqhzC5TdNMLSE5+GS1IIDJZY/1ZiEPCT2S3COUVZeT5OW4BmW4r5LHLQuOosSwsvnroG9GR59Q==
 
 iconv-lite@^0.6.3:
   version "0.6.3"
@@ -7852,6 +7867,15 @@ react-popper@2.2.5:
     react-fast-compare "^3.0.1"
     warning "^4.0.2"
 
+react-quiz-component@^0.5.1:
+  version "0.5.1"
+  resolved "https://registry.npmjs.org/react-quiz-component/-/react-quiz-component-0.5.1.tgz"
+  integrity sha512-47NdwU8VdhcWk6WMEpkQacazpV/JUsYE2mItki3u7mZjMOBEJSISUYja706+oDVIoZCRyQSrJo+4COkVuhKLhg==
+  dependencies:
+    "@webpack-cli/serve" "^1.6.1"
+    dompurify "^2.0.8"
+    snarkdown "^2.0.0"
+
 react-refresh@^0.11.0:
   version "0.11.0"
   resolved "https://registry.npmjs.org/react-refresh/-/react-refresh-0.11.0.tgz"
@@ -8444,6 +8468,11 @@ slash@^4.0.0:
   version "4.0.0"
   resolved "https://registry.npmjs.org/slash/-/slash-4.0.0.tgz"
   integrity sha512-3dOsAHXXUkQTpOYcoAxLIorMTp4gIQr5IW3iVb7A7lFIp0VHhnynm9izx6TssdrIcVIESAlVjtnO2K8bg+Coew==
+
+snarkdown@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.npmjs.org/snarkdown/-/snarkdown-2.0.0.tgz"
+  integrity sha512-MgL/7k/AZdXCTJiNgrO7chgDqaB9FGM/1Tvlcenenb7div6obaDATzs16JhFyHHBGodHT3B7RzRc5qk8pFhg3A==
 
 sockjs@^0.3.24:
   version "0.3.24"

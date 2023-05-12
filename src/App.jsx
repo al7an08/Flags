@@ -11,6 +11,10 @@ import Question from "./components/Question";
 
 import QuestionPage from "./pages/QuestionPage";
 
+import { quiz } from './quiz';
+
+import Quiz from 'react-quiz-component';
+
 const initializeAssistant = (getState/*: any*/) => {
   if (process.env.NODE_ENV === "development") {
     return createSmartappDebugger({
@@ -122,12 +126,14 @@ export class App extends React.Component {
     console.log('render');
     return (
       <>
+        <div className="wrapper">
+          <QuestionPage countryImage={'/images/ca.png'} answers={['Russia', 'Canada', 'UK', 'Vietnam']} correctAnswer={1} questionNumber={1}></QuestionPage>
+        </div>
         {/* <TaskList
           items={this.state.notes}
           onAdd={(note) => { this.add_note({ type: "add_note", note }); }}
           onDone={(note) => { this.done_note({ type: "done_note", id: note.id }) }}
         /> */}
-        <QuestionPage countryImage={'/images/ca.png'} answers={['Russia', 'Canada', 'UK', 'Vietnam']} correctAnswer={1} ></QuestionPage>
       </>
     )
   }

@@ -7,7 +7,7 @@ import { DeviceThemeProvider } from '@salutejs/plasma-ui/components/Device'; // 
 import { GlobalStyle } from './GlobalStyle'; // Тема оформления (цветовая схема)
 
 ReactDOM.render(
-  <DeviceThemeProvider>
+  <DeviceThemeProvider responsiveTypo={true}>
     <GlobalStyle />
     <React.StrictMode>
       <App />
