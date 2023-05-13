@@ -38,5 +38,25 @@
 }
 
 .flagImage {
-  height: 33vh;
+  max-height: 33vh;
+}
+
+.info {
+  width: 100%;
+  display: inline-flex;
+  justify-content: space-around;
+}
+
+.score {
+  border: 1px solid red;
+  border-radius: 10px;
+  background-color: brown;
+  padding: 0.5%;
+}
+
+.questionNumber {
+  border: 1px solid red;
+  border-radius: 10px;
+  background-color: brown;
+  padding: 0.5%;
 }

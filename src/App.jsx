@@ -190,7 +190,7 @@ export class App extends React.Component {
     return (
       <>
         <div className="wrapper">
-          <QuestionPage currentQuestion={this.state.currentQuestion + 1} question={questions[this.state.currentQuestion]}></QuestionPage>
+          <QuestionPage currentQuestion={this.state.currentQuestion + 1} question={questions[this.state.currentQuestion]} score={this.state.score}></QuestionPage>
         </div>
       </>
     )
@@ -198,50 +198,3 @@ export class App extends React.Component {
 
 
 }
-
-// const App = () => {
-//   const assistant = initializeAssistant(() => getStateForAssistant());
-
-//   assistant.on("data", (event/*: any*/) => {
-//     console.log(`assistant.on(data)`, event);
-//     const { action } = event
-//     this.dispatchAssistantAction(action);
-//   });
-
-//   assistant.on("start", (event) => {
-//     console.log(`assistant.on(start)`, event);
-//   });
-
-//   function getStateForAssistant() {
-//     console.log('getStateForAssistant: this.state:', this.state)
-//     const state = {
-//       item_selector: {
-//         items: this.state.notes.map(
-//           ({ id, title }, index) => ({
-//             number: index + 1,
-//             id,
-//             title,
-//           })
-//         ),
-//       },
-//     };
-//     console.log('getStateForAssistant: state:', state)
-//     return state;
-//   }
-
-//   const [currentQuestion, setCurrentQuestion] = useState(0);
-
-//   const [score, setScore] = useState(0);
-
-//   const [showScore, setShowScore] = useState(false);
-
-//   return (
-//     <>
-//       <div className="wrapper">
-//         <QuestionPage currentQuestion={currentQuestion + 1} question={questions[currentQuestion]} ></QuestionPage>
-//       </div>
-//     </>
-//   )
-// }
-
-// export default App
