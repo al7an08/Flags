@@ -87,6 +87,7 @@ export class App extends React.Component {
   constructor(props) {
     super(props);
     console.log('constructor');
+    this.handleOptionClick = this.handleOptionClick.bind(this);
 
     this.state = {
       notes: [],
@@ -107,9 +108,9 @@ export class App extends React.Component {
 
   }
 
-  setCurrentQuestion = (event) => {
+  setCurrentQuestion = (number) => {
     this.setState = ({
-      currentQuestion: event.target.value
+      currentQuestion: number
     })
   }
 
@@ -185,12 +186,34 @@ export class App extends React.Component {
     })
   }
 
+
+  handleOptionClick(isCorrect) {
+    if (isCorrect) {
+      this.setState({
+        score: this.state.score + 1,
+      })
+    }
+
+    const nextQuestion = this.state.currentQuestion + 1;
+
+    if (nextQuestion < questions.length) {
+      this.setState({
+        currentQuestion: this.state.currentQuestion + 1
+      });
+    }
+    else {
+      this.setState({
+        showScore: true
+      })
+    }
+    console.log('click' + isCorrect)
+  }
   render() {
     console.log('render');
     return (
       <>
         <div className="wrapper">
-          <QuestionPage currentQuestion={this.state.currentQuestion + 1} question={questions[this.state.currentQuestion]} score={this.state.score}></QuestionPage>
+          <QuestionPage currentQuestion={this.state.currentQuestion + 1} question={questions[this.state.currentQuestion]} score={this.state.score} handleOptionClick={this.handleOptionClick}></QuestionPage>
         </div>
       </>
     )
