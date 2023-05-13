@@ -6,14 +6,63 @@ import {
 //} from "@sberdevices/assistant-client";
 
 import "./App.css";
-import { TaskList } from './pages/TaskList';
-import Question from "./components/Question";
 
 import QuestionPage from "./pages/QuestionPage";
 
-import { quiz } from './quiz';
 
-import Quiz from 'react-quiz-component';
+const questions = [
+  {
+    countryImage: '/images/ca.png',
+    answersOptions: [
+      {
+        answerNumber: 1, answersText: 'Великобритания', isCorrect: false
+      },
+      {
+        answerNumber: 2, answersText: 'Россия', isCorrect: false
+      },
+      {
+        answerNumber: 3, answersText: 'Канада', isCorrect: true
+      },
+      {
+        answerNumber: 4, answersText: 'США', isCorrect: false
+      }
+    ],
+  },
+  {
+    countryImage: '/images/ar.png',
+    answersOptions: [
+      {
+        answerNumber: 1, answersText: 'Аргентина', isCorrect: true
+      },
+      {
+        answerNumber: 2, answersText: 'Вьетнам', isCorrect: false
+      },
+      {
+        answerNumber: 3, answersText: 'Мадаскар', isCorrect: false
+      },
+      {
+        answerNumber: 4, answersText: 'Казахстан', isCorrect: false
+      }
+    ],
+  },
+  {
+    countryImage: '/images/ru.png',
+    answersOptions: [
+      {
+        answerNumber: 1, answersText: 'Кыргызстан', isCorrect: false
+      },
+      {
+        answerNumber: 2, answersText: 'Россия', isCorrect: true
+      },
+      {
+        answerNumber: 3, answersText: 'Мексика', isCorrect: false
+      },
+      {
+        answerNumber: 4, answersText: 'Франция', isCorrect: false
+      }
+    ],
+  }
+]
 
 const initializeAssistant = (getState/*: any*/) => {
   if (process.env.NODE_ENV === "development") {
@@ -27,8 +76,13 @@ const initializeAssistant = (getState/*: any*/) => {
 };
 
 
-
 export class App extends React.Component {
+  state = {
+    notes: [],
+    currentQuestion: 0,
+    score: 0,
+    showScore: false
+  }
 
   constructor(props) {
     super(props);
@@ -36,6 +90,9 @@ export class App extends React.Component {
 
     this.state = {
       notes: [],
+      currentQuestion: 0,
+      score: 0,
+      showScore: false
     }
 
     this.assistant = initializeAssistant(() => this.getStateForAssistant());
@@ -48,6 +105,12 @@ export class App extends React.Component {
       console.log(`assistant.on(start)`, event);
     });
 
+  }
+
+  setCurrentQuestion = (event) => {
+    this.setState = ({
+      currentQuestion: event.target.value
+    })
   }
 
   componentDidMount() {
@@ -127,13 +190,8 @@ export class App extends React.Component {
     return (
       <>
         <div className="wrapper">
-          <QuestionPage countryImage={'/images/ca.png'} answers={['Russia', 'Canada', 'UK', 'Vietnam']} correctAnswer={1} questionNumber={1}></QuestionPage>
+          <QuestionPage currentQuestion={this.state.currentQuestion + 1} question={questions[this.state.currentQuestion]}></QuestionPage>
         </div>
-        {/* <TaskList
-          items={this.state.notes}
-          onAdd={(note) => { this.add_note({ type: "add_note", note }); }}
-          onDone={(note) => { this.done_note({ type: "done_note", id: note.id }) }}
-        /> */}
       </>
     )
   }
@@ -141,3 +199,49 @@ export class App extends React.Component {
 
 }
 
+// const App = () => {
+//   const assistant = initializeAssistant(() => getStateForAssistant());
+
+//   assistant.on("data", (event/*: any*/) => {
+//     console.log(`assistant.on(data)`, event);
+//     const { action } = event
+//     this.dispatchAssistantAction(action);
+//   });
+
+//   assistant.on("start", (event) => {
+//     console.log(`assistant.on(start)`, event);
+//   });
+
+//   function getStateForAssistant() {
+//     console.log('getStateForAssistant: this.state:', this.state)
+//     const state = {
+//       item_selector: {
+//         items: this.state.notes.map(
+//           ({ id, title }, index) => ({
+//             number: index + 1,
+//             id,
+//             title,
+//           })
+//         ),
+//       },
+//     };
+//     console.log('getStateForAssistant: state:', state)
+//     return state;
+//   }
+
+//   const [currentQuestion, setCurrentQuestion] = useState(0);
+
+//   const [score, setScore] = useState(0);
+
+//   const [showScore, setShowScore] = useState(false);
+
+//   return (
+//     <>
+//       <div className="wrapper">
+//         <QuestionPage currentQuestion={currentQuestion + 1} question={questions[currentQuestion]} ></QuestionPage>
+//       </div>
+//     </>
+//   )
+// }
+
+// export default App
