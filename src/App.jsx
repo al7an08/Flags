@@ -8,7 +8,9 @@ import {
 import "./App.css";
 
 import QuestionPage from "./pages/QuestionPage";
-
+import GameOverPage from "./pages/GameOverPage";
+import StartPage from "./pages/StartPage";
+import HelpPage from "./pages/HelpPage";
 
 const questions = [
   {
@@ -88,12 +90,17 @@ export class App extends React.Component {
     super(props);
     console.log('constructor');
     this.handleOptionClick = this.handleOptionClick.bind(this);
+    this.handleRestartClick = this.handleRestartClick.bind(this);
+    this.handleStartGame = this.handleStartGame.bind(this);
+    this.handleHelp = this.handleHelp.bind(this)
 
     this.state = {
       notes: [],
       currentQuestion: 0,
       score: 0,
-      showScore: false
+      showScore: false,
+      showGame: false,
+      showHelp: false
     }
 
     this.assistant = initializeAssistant(() => this.getStateForAssistant());
@@ -208,12 +215,50 @@ export class App extends React.Component {
     }
     console.log('click' + isCorrect)
   }
+
+  handleRestartClick() {
+    this.setState({
+      currentQuestion: 0,
+      showScore: false,
+      score: 0
+    })
+  }
+
+  handleStartGame() {
+    this.setState({
+      currentQuestion: 0,
+      showScore: false,
+      score: 0,
+      showGame: true
+    })
+  }
+
+  handleHelp() {
+    this.setState({
+      showHelp: !this.state.showHelp,
+    })
+  }
   render() {
     console.log('render');
+    if (!this.state.showGame && !this.state.showHelp) {
+      return <div className="wrapper">
+        <StartPage handleStartGame={this.handleStartGame} handleHelp={this.handleHelp}></StartPage>
+      </div>
+    }
+
+    if (this.state.showHelp) {
+      return <div className="wrapper">
+        <HelpPage handleHelp={this.handleHelp}></HelpPage>
+      </div>
+    }
     return (
       <>
         <div className="wrapper">
-          <QuestionPage currentQuestion={this.state.currentQuestion + 1} question={questions[this.state.currentQuestion]} score={this.state.score} handleOptionClick={this.handleOptionClick}></QuestionPage>
+          {!this.state.showScore ?
+            <QuestionPage currentQuestion={this.state.currentQuestion + 1} question={questions[this.state.currentQuestion]} score={this.state.score} handleOptionClick={this.handleOptionClick}></QuestionPage>
+            :
+            <GameOverPage score={this.state.score} handleRestartClick={this.handleRestartClick}></GameOverPage>
+          }
         </div>
       </>
     )

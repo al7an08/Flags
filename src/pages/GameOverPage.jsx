@@ -1,10 +1,13 @@
 import React from 'react'
 
 const GameOverPage = (props) => {
-    const { score } = props;
+    const { score, handleRestartClick } = props;
 
     return (
-        <div>GameOver</div>
+        <div className='gameOverPage'>
+            <h1>Правильных ответов: {score}</h1>
+            <button className='restartButton' onClick={handleRestartClick}>Играть ещё раз</button>
+        </div>
     )
 }
 

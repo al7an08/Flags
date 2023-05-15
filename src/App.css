@@ -15,12 +15,26 @@
 
 
 .button {
-  width: 200px;
-  height: 100px;
-  border: 1px solid black;
+  width: 34vh;
+  height: 13vh;
+  text-decoration: none;
+  display: inline-block;
+  color: white;
+  padding: 20px 30px;
+  margin: 10px 20px;
   border-radius: 10px;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background-image: linear-gradient(to right, #9EEFE1 0%, #4830F0 51%, #9EEFE1 100%);
+  background-size: 200% auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+  transition: .5s;
 }
 
+.button:hover {
+  background-position: right center;
+}
 
 .questionSection {
   display: flex;
@@ -35,6 +49,7 @@
   margin: 0 auto;
   padding-left: 16px;
   padding-right: 16px;
+  height: 100vh;
 }
 
 .flagImage {
@@ -42,21 +57,46 @@
 }
 
 .info {
-  width: 100%;
-  display: inline-flex;
-  justify-content: space-around;
+  margin: 1vh;
 }
 
-.score {
-  border: 1px solid red;
-  border-radius: 10px;
-  background-color: brown;
-  padding: 0.5%;
+
+.gameOverPage {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.questionNumber {
-  border: 1px solid red;
+.restartButton {
+  text-decoration: none;
+  display: inline-block;
+  color: white;
+  padding: 20px 30px;
+  margin: 10px 20px;
   border-radius: 10px;
-  background-color: brown;
-  padding: 0.5%;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background-image: linear-gradient(to right, #9EEFE1 0%, #4830F0 51%, #9EEFE1 100%);
+  background-size: 200% auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+  transition: .5s;
+}
+
+.helpPage {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.startPage {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

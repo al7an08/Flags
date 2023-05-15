@@ -1,11 +1,12 @@
 import React from 'react'
 
-const StartPage = () => {
+const StartPage = (props) => {
+    const { handleStartGame, handleHelp } = props;
     return (
-        <div className='wrapper'>
+        <div className='startPage'>
             <h2>Добро пожаловать! Начнем играть?</h2>
-            <button >Начать игру</button>
-            <button >Как играть?</button>
+            <button className='button' onClick={handleStartGame}>Начать игру</button>
+            <button className='button' onClick={handleHelp}>Как играть?</button>
         </div>
     )
 }
