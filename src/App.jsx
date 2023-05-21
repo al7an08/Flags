@@ -6,6 +6,7 @@ import QuestionPage from "./pages/QuestionPage";
 import GameOverPage from "./pages/GameOverPage";
 import StartPage from "./pages/StartPage";
 import HelpPage from "./pages/HelpPage";
+import MenuPage from "./pages/MenuPage";
 
 const initializeAssistant = (getState) => {
   if (process.env.NODE_ENV === "development") {
@@ -32,14 +33,18 @@ export class App extends React.Component {
     this.handleRestartClick = this.handleRestartClick.bind(this);
     this.handleStartGame = this.handleStartGame.bind(this);
     this.handleHelp = this.handleHelp.bind(this);
+    this.handleNumOfQuestionsChange = this.handleNumOfQuestionsChange.bind(this);
+    this.handleShowMenu = this.handleShowMenu.bind(this);
 
     this.state = {
       notes: [],
       currentQuestionIndex: 0,
       score: 0,
+      numOfQuestions: 10,
       showScore: false,
       showGame: false,
-      showHelp: false
+      showHelp: false,
+      showMenu: false
     };
 
     this.assistant = initializeAssistant(() => this.getStateForAssistant());
@@ -128,7 +133,7 @@ export class App extends React.Component {
 
     const nextQuestionIndex = this.state.currentQuestionIndex + 1;
 
-    if (nextQuestionIndex < flagsData.length) {
+    if (nextQuestionIndex < this.state.numOfQuestions) {
       this.setState({
         currentQuestionIndex: nextQuestionIndex,
       });
@@ -146,6 +151,8 @@ export class App extends React.Component {
       currentQuestionIndex: 0,
       showScore: false,
       score: 0,
+      showGame: false,
+      showMenu: true,
     });
   }
 
@@ -153,29 +160,54 @@ export class App extends React.Component {
     this.setState({
       currentQuestionIndex: 0,
       showScore: false,
+      showMenu: false,
       score: 0,
       showGame: true,
     });
   }
 
+  handleShowMenu() {
+    this.setState({
+      showMenu: true,
+    })
+    console.log(this.state.showMenu)
+  }
+
+  handleNumOfQuestionsChange(num) {
+    if (num >= 5 && num <= 100) {
+      this.setState({
+        numOfQuestions: num
+      })
+    }
+  }
+
   handleHelp() {
     this.setState({
       showHelp: !this.state.showHelp,
+      showMenu: false,
     });
   }
 
   render() {
     console.log('render');
 
-    if (!this.state.showGame && !this.state.showHelp) {
+    if (!this.state.showGame && !this.state.showHelp && !this.state.showMenu) {
       return (
         <div className="wrapper">
-          <StartPage handleStartGame={this.handleStartGame} handleHelp={this.handleHelp} />
+          <StartPage handleStartGame={this.handleShowMenu} handleHelp={this.handleHelp} />
         </div>
       );
     }
 
-    if (this.state.showHelp) {
+    if (this.state.showMenu && !this.state.showHelp) {
+      return (
+        <div className="wrapper">
+          <MenuPage setNumOfQuestions={this.handleNumOfQuestionsChange} handleStartGame={this.handleStartGame} numOfQuestions={this.state.numOfQuestions} />
+        </div>
+      );
+    }
+
+    if (this.state.showHelp && !this.state.showMenu) {
       return (
         <div className="wrapper">
           <HelpPage handleHelp={this.handleHelp} />

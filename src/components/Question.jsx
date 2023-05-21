@@ -9,7 +9,7 @@ const Question = ({ handleOptionClick, question }) => {
 
   return (
     <div className='questionSection'>
-      <img className='flagImage' src={flagUrl} alt='' />
+      <img rel="preload" className='flagImage' src={flagUrl} alt='' />
       <div className='answers'>
         {options.map((option, index) => (
           <button key={index} onClick={() => handleButtonClick(option === correctAnswer)} className='button'>

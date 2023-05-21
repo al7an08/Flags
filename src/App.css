@@ -95,6 +95,14 @@
   align-items: center;
 }
 
+.menuPage {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .startPage {
   display: flex;
   height: 100%;
@@ -169,13 +177,18 @@
   background-color: red;
 }
 
+.stepper {
+  height: 100px;
+  width: 100px;
+  size: 100px;
+}
+
 @keyframes fadeOut {
   0% {
     opacity: 1;
   }
+
   100% {
     opacity: 0;
   }
 }
-
-
