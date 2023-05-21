@@ -1,21 +1,24 @@
-import React from 'react'
+import React from 'react';
 
-const Question = (props) => {
-    const { handleOptionClick, question } = props;
-    const answersOptions = question.answersOptions;
-    const countryImage = question.countryImage;
-    return (
-        <div className='questionSection'>
-            <img className='flagImage' src={countryImage} alt='' />
-            <div className='answers' >
-                <button onClick={() => handleOptionClick(answersOptions[0].isCorrect)} className='button'>{answersOptions[0].answerNumber}. {answersOptions[0].answersText}</button>
-                <button onClick={() => handleOptionClick(answersOptions[1].isCorrect)} className='button'>{answersOptions[1].answerNumber}. {answersOptions[1].answersText}</button>
-                <button onClick={() => handleOptionClick(answersOptions[2].isCorrect)} className='button'>{answersOptions[2].answerNumber}. {answersOptions[2].answersText}</button>
-                <button onClick={() => handleOptionClick(answersOptions[3].isCorrect)} className='button'>{answersOptions[3].answerNumber}. {answersOptions[3].answersText}</button>
-            </div>
-        </div>
-    )
-}
+const Question = ({ handleOptionClick, question }) => {
+  const { options, flagUrl, correctAnswer } = question;
 
+  const handleButtonClick = (isCorrect) => {
+    handleOptionClick(isCorrect);
+  };
 
-export default Question
+  return (
+    <div className='questionSection'>
+      <img className='flagImage' src={flagUrl} alt='' />
+      <div className='answers'>
+        {options.map((option, index) => (
+          <button key={index} onClick={() => handleButtonClick(option === correctAnswer)} className='button'>
+            {`${index + 1}. ${option}`}
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default Question;
