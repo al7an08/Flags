@@ -128,15 +128,10 @@ export class App extends React.Component {
   getStateForAssistant() {
     console.log('getStateForAssistant: this.state:', this.state)
     const state = {
-      item_selector: {
-        items: this.state.notes.map(
-          ({ id, title }, index) => ({
-            number: index + 1,
-            id,
-            title,
-          })
-        ),
-      },
+      answer_selector: {
+        answers: questions[this.state.currentQuestion]
+      }
+
     };
     console.log('getStateForAssistant: state:', state)
     return state;

@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
   max-height: 100%;
+  margin: 0;
 }
 
 .answers {
@@ -57,7 +58,8 @@
 }
 
 .info {
-  margin: 1vh;
+  display: flex;
+  flex-direction: row;
 }
 
 
@@ -99,4 +101,28 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.currentQuestion {
+  margin-left: 1vh;
+  margin-right: 1vh;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 0.5vh;
+  background-image: linear-gradient(to right, #9EEFE1 0%, #4830F0 51%, #9EEFE1 100%);
+  background-size: 200% auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+  font-family: 'Montserrat', sans-serif;
+  font-size: large;
+}
+
+.score {
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 0.5vh;
+  background-image: linear-gradient(to right, #9EEFE1 0%, #4830F0 51%, #9EEFE1 100%);
+  background-size: 200% auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+  font-family: 'Montserrat', sans-serif;
+  font-size: large;
 }
