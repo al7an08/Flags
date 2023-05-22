@@ -1,5 +1,5 @@
 import React from "react";
-import { flagsData, getRandomQuestionIndex } from './flagsData';
+import { flagsData, getRandomQuestionIndex, resetUsedFlagIndexes} from './flagsData';
 import { createSmartappDebugger, createAssistant } from "@salutejs/client";
 import "./App.css";
 import QuestionPage from "./pages/QuestionPage";
@@ -149,6 +149,7 @@ export class App extends React.Component {
   }
 
   handleRestartClick() {
+    resetUsedFlagIndexes()
     this.setState({
       currentQuestionIndex: 0,
       showScore: false,
@@ -159,6 +160,7 @@ export class App extends React.Component {
   }
 
   handleStartGame() {
+    resetUsedFlagIndexes()
     this.setState({
       currentQuestionIndex: 0,
       showScore: false,
