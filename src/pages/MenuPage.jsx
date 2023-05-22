@@ -6,12 +6,12 @@ const MenuPage = (props) => {
     const { setNumOfQuestions, handleStartGame, numOfQuestions } = props;
     return (
         <div className='menuPage'>
-            <h1>Количество вопрос</h1>
+            <h1>Количество вопросов</h1>
             <Stepper className='stepper' step={1}
                 value={numOfQuestions}
                 min={5}
                 max={100}
-                showRemove={true}
+                showRemove={false}
                 pin="circle-circle"
                 onChange={(value) => {
                     setValue(value)
