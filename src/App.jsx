@@ -125,25 +125,27 @@ export class App extends React.Component {
   }
 
   handleOptionClick(isCorrect) {
-    if (isCorrect) {
-      this.setState({
-        score: this.state.score + 1,
-      });
-    }
 
-    const nextQuestionIndex = this.state.currentQuestionIndex + 1;
+    setTimeout(() => {
+      if (isCorrect) {
+        this.setState({
+          score: this.state.score + 1,
+        });
+      }
+      const nextQuestionIndex = this.state.currentQuestionIndex + 1;
 
-    if (nextQuestionIndex < this.state.numOfQuestions) {
-      this.setState({
-        currentQuestionIndex: nextQuestionIndex,
-      });
-    } else {
-      this.setState({
-        showScore: true,
-      });
-    }
+      if (nextQuestionIndex < this.state.numOfQuestions) {
+        this.setState({
+          currentQuestionIndex: nextQuestionIndex,
+        });
+      } else {
+        this.setState({
+          showScore: true,
+        });
+      }
 
-    console.log('click' + isCorrect);
+      console.log('click' + isCorrect);
+    }, 3000)
   }
 
   handleRestartClick() {

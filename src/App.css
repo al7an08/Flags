@@ -169,6 +169,7 @@
   animation: fadeOut 1s ease-in;
 }
 
+
 .feedback.correct {
   background-color: green;
 }
@@ -186,6 +187,72 @@
 @keyframes fadeOut {
   0% {
     opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+
+.questionSection.entering {
+  animation: Appearance 2s forwards;
+}
+
+.flagImage.entered {}
+
+.questionSection.exiting {
+  animation: Appearance 2s reverse;
+}
+
+.questionSection.exited {
+  animation: exit infinite
+}
+
+
+@-webkit-keyframes Appearance {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes Appearance {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes Appearance {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes Appearance {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes exit {
+  0% {
+    opacity: 0;
   }
 
   100% {
