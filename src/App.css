@@ -17,14 +17,14 @@
 
 
 .button {
-  width: 34vw;
+  width: 40vw;
   height: 13vh;
   text-decoration: none;
   display: inline-block;
   color: white;
   /* padding: 20px 30px; */
   padding: 0 auto;
-  margin: 10px 20px;
+  margin: 10px 1vw;
   border-radius: 10px;
   font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
@@ -121,6 +121,7 @@
   background-size: 200% auto;
   box-shadow: 0 0 20px rgba(0, 0, 0, .1);
   font-family: 'Montserrat', sans-serif;
+  text-align: center;
   font-size: large;
 }
 
