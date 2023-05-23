@@ -135,6 +135,7 @@
   background-size: 200% auto;
   box-shadow: 0 0 20px rgba(0, 0, 0, .1);
   font-family: 'Montserrat', sans-serif;
+  text-align: center;
   font-size: large;
 }
 
@@ -270,4 +271,5 @@
 .text {
   align-self: center;
   justify-self: center;
+  margin: 0 auto;
 }
