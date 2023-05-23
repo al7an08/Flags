@@ -29,6 +29,7 @@
   font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
   white-space: normal;
+  word-break: break-all;
   text-align: center;
   letter-spacing: 2px;
   background-image: linear-gradient(to right, #9EEFE1 0%, #4830F0 51%, #9EEFE1 100%);
@@ -264,4 +265,9 @@
   max-height: 40vh;
   margin: 0;
   padding: 0;
+}
+
+.text {
+  align-self: center;
+  justify-self: center;
 }

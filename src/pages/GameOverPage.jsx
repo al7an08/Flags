@@ -5,7 +5,7 @@ const GameOverPage = (props) => {
 
     return (
         <div className='gameOverPage'>
-            <h1>Правильных ответов: {score}</h1>
+            <h1 className='text'>Правильных ответов: {score}</h1>
             <button className='restartButton' onClick={handleRestartClick}>Играть ещё раз</button>
         </div>
     )
