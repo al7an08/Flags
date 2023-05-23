@@ -9,9 +9,10 @@
 .answers {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-column-gap: 16px;
-  grid-row-gap: 16px;
-  padding: 1% 2%;
+  grid-column-gap: 0;
+  grid-row-gap: 0;
+  padding: 0;
+  margin: 0;
 }
 
 
