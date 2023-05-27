@@ -6,7 +6,7 @@ const HelpPage = ({ handleHelp }) => {
             <h1 className='text'>Правила игры</h1>
             <p className='text'>На экране будет показан флаг страны, Вам необходимо, выбрав один из вариантов, угадать какой стране принадлежит данный флаг. Удачной игры!</p>
             <button className='button' onClick={handleHelp} style={{
-                width: '50%',
+                width: 'fit-content',
             }}>Вернуться назад</button>
         </div>
     )
