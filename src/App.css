@@ -42,6 +42,10 @@
   background-position: right center;
 }
 
+.button:disabled {
+  background-position: 0;
+}
+
 .questionSection {
   display: flex;
   flex-direction: column;
