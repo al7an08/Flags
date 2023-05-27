@@ -6,7 +6,7 @@ const StartPage = (props) => {
         <div className='startPage'>
             <h2 className='text'>Добро пожаловать! Начнем играть?</h2>
             <button className='button' onClick={handleStartGame}>Начать игру</button>
-            <button className='button' onClick={handleHelp}>Как играть?</button>
+            <button className='button' onClick={handleHelp}>Правила</button>
         </div>
     )
 }
