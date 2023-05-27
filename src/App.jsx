@@ -1,5 +1,5 @@
 import React from "react";
-import { flagsData, getRandomQuestionIndex, resetUsedFlagIndexes} from './flagsData';
+import { flagsData, getRandomQuestionIndex, resetUsedFlagIndexes } from './flagsData';
 import { createSmartappDebugger, createAssistant } from "@salutejs/client";
 import "./App.css";
 import QuestionPage from "./pages/QuestionPage";
@@ -35,6 +35,7 @@ export class App extends React.Component {
     this.handleHelp = this.handleHelp.bind(this);
     this.handleNumOfQuestionsChange = this.handleNumOfQuestionsChange.bind(this);
     this.handleShowMenu = this.handleShowMenu.bind(this);
+    this.handleStartPage = this.handleStartPage.bind(this);
 
     this.state = {
       notes: [],
@@ -177,6 +178,13 @@ export class App extends React.Component {
     console.log(this.state.showMenu)
   }
 
+  handleStartPage() {
+    this.setState({
+      showMenu: false,
+    })
+    console.log(this.state.showMenu)
+  }
+
   handleNumOfQuestionsChange(num) {
     if (num >= 5 && num <= 100) {
       this.setState({
@@ -206,7 +214,7 @@ export class App extends React.Component {
     if (this.state.showMenu && !this.state.showHelp) {
       return (
         <div className="wrapper">
-          <MenuPage setNumOfQuestions={this.handleNumOfQuestionsChange} handleStartGame={this.handleStartGame} numOfQuestions={this.state.numOfQuestions} />
+          <MenuPage setNumOfQuestions={this.handleNumOfQuestionsChange} handleStartPage={this.handleStartPage} handleStartGame={this.handleStartGame} numOfQuestions={this.state.numOfQuestions} />
         </div>
       );
     }

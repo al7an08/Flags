@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Stepper } from '@salutejs/plasma-ui'
 const MenuPage = (props) => {
     const [value, setValue] = useState(10);
-    const { setNumOfQuestions, handleStartGame, numOfQuestions } = props;
+    const { setNumOfQuestions, handleStartGame, handleStartPage, numOfQuestions } = props;
     return (
         <div className='menuPage'>
             <h1 className='text'>Количество вопросов</h1>
@@ -24,6 +24,7 @@ const MenuPage = (props) => {
                 ariaLabelDecrement="Уменьшить значение"
                 ariaLabelIncrement="Увеличить значение" />
             <button className='button' onClick={handleStartGame}>Начать игру</button>
+            <button className='button' onClick={handleStartPage}>Вернуться в главное меню</button>
         </div>
     )
 }
