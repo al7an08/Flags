@@ -46,6 +46,7 @@
   background-position: 0;
 }
 
+
 .questionSection {
   display: flex;
   flex-direction: column;
@@ -97,9 +98,12 @@
   display: flex;
   height: 100%;
   flex-direction: column;
+  text-align: center;
   justify-content: center;
   align-items: center;
 }
+
+
 
 .menuPage {
   display: flex;
@@ -112,6 +116,7 @@
 .startPage {
   display: flex;
   height: 100%;
+  text-align: center;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -277,5 +282,5 @@
 .text {
   align-self: center;
   justify-self: center;
-  margin: 0 auto;
+  margin: 3% auto;
 }
