@@ -23,7 +23,7 @@ const MenuPage = (props) => {
                 ariaLabelRemove="Удалить"
                 ariaLabelDecrement="Уменьшить значение"
                 ariaLabelIncrement="Увеличить значение" />
-            <button className='button' onClick={handleStartGame}>Начать игру</button>
+            <button className='button' onClick={handleStartGame}>Продолжить</button>
             <button className='button' onClick={handleStartPage}>Вернуться в главное меню</button>
         </div>
     )

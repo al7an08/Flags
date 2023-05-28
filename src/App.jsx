@@ -29,6 +29,9 @@ export class App extends React.Component {
   constructor(props) {
     super(props);
 
+    this.help = this.help.bind(this);
+    this.choose_amount = this.choose_amount.bind(this);
+    this.start_game = this.start_game.bind(this);
     this.handleOptionClick = this.handleOptionClick.bind(this);
     this.handleRestartClick = this.handleRestartClick.bind(this);
     this.handleStartGame = this.handleStartGame.bind(this);
@@ -81,16 +84,61 @@ export class App extends React.Component {
     console.log('dispatchAssistantAction', action);
     if (action) {
       switch (action.type) {
-        case 'add_note':
-          return this.add_note(action);
-        case 'done_note':
-          return this.done_note(action);
-        case 'delete_note':
-          return this.delete_note(action);
+        case 'start_game':
+          return this.start_game(action);
+        case 'start_quiz':
+          return this.start_quiz(action)
+        case 'help':
+          return this.help(action);
+        case 'main_menu':
+          return this.main_menu(action);
+        case 'choose_amount':
+          return this.choose_amount(action);
         default:
           throw new Error();
       }
     }
+  }
+
+  choose_amount(action) {
+    console.log('choose_amount')
+
+    // this.handleNumOfQuestionsChange(parseInt(action.number));
+
+    // console.log(action.number)
+  }
+
+  main_menu(action) {
+    console.log('main_menu', action)
+
+    this.handleStartPage();
+  }
+
+
+  start_quiz(action) {
+    console.log('start_quiz', action)
+
+    this.handleStartGame();
+  }
+
+
+  start_game(action) {
+    console.log('start_game', action);
+
+    this.handleShowMenu();
+
+  }
+
+  choose_answer(action) {
+    console.log('choose_answer', action);
+
+
+  }
+
+  help(action) {
+    console.log('niggggga', action);
+
+    this.handleHelp();
   }
 
   add_note(action) {
@@ -104,24 +152,6 @@ export class App extends React.Component {
           completed: false,
         },
       ],
-    });
-  }
-
-  done_note(action) {
-    console.log('done_note', action);
-    this.setState({
-      notes: this.state.notes.map((note) =>
-        note.id === action.id
-          ? { ...note, completed: !note.completed }
-          : note
-      ),
-    });
-  }
-
-  delete_note(action) {
-    console.log('delete_note', action);
-    this.setState({
-      notes: this.state.notes.filter(({ id }) => id !== action.id),
     });
   }
 
@@ -166,6 +196,7 @@ export class App extends React.Component {
       currentQuestionIndex: 0,
       showScore: false,
       showMenu: false,
+      showHelp: false,
       score: 0,
       showGame: true,
     });
@@ -180,7 +211,12 @@ export class App extends React.Component {
 
   handleStartPage() {
     this.setState({
+      currentQuestionIndex: 0,
+      showScore: false,
       showMenu: false,
+      showHelp: false,
+      showGame: false,
+      score: 0,
     })
     console.log(this.state.showMenu)
   }
@@ -194,8 +230,9 @@ export class App extends React.Component {
   }
 
   handleHelp() {
+    console.log('AAAAVDABDABDABA');
     this.setState({
-      showHelp: !this.state.showHelp,
+      showHelp: true,
       showMenu: false,
     });
   }
