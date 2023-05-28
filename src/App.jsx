@@ -103,7 +103,7 @@ export class App extends React.Component {
   choose_amount(action) {
     console.log('choose_amount')
 
-    // this.handleNumOfQuestionsChange(parseInt(action.number));
+    this.handleNumOfQuestionsChange(Number(action.number));
 
     // console.log(action.number)
   }
