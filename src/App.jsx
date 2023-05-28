@@ -93,7 +93,7 @@ export class App extends React.Component {
         case 'main_menu':
           return this.main_menu(action);
         case 'choose_amount':
-          return this.choose_amount(action);
+          return this.handleNumOfQuestionsChange(action.note);
         default:
           throw new Error();
       }
@@ -101,9 +101,10 @@ export class App extends React.Component {
   }
 
   choose_amount(action) {
-    console.log('choose_amount')
+    console.log('choose_amount', action)
 
-    this.handleNumOfQuestionsChange(Number(action.number));
+    console.log("АААААААААААААААА НЕГРЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫ")
+    this.handleNumOfQuestionsChange(Number(action.note));
 
     // console.log(action.number)
   }
@@ -136,24 +137,11 @@ export class App extends React.Component {
   }
 
   help(action) {
-    console.log('niggggga', action);
+    console.log('help', action);
 
     this.handleHelp();
   }
 
-  add_note(action) {
-    console.log('add_note', action);
-    this.setState({
-      notes: [
-        ...this.state.notes,
-        {
-          id: Math.random().toString(36).substring(7),
-          title: action.note,
-          completed: false,
-        },
-      ],
-    });
-  }
 
   handleOptionClick(isCorrect) {
 
