@@ -127,12 +127,19 @@ export class App extends React.Component {
 
   country_choose_by_name(action) {
     console.log('country_choose_by_name', action);
-
-    if (action.country === this.state.questions[this.state.currentQuestionIndex].correctAnswer) {
-      console.log('action.coutnry');
+    this.options = this.state.questions[this.state.currentQuestionIndex].options.map(option => (option.toLowerCase()));
+    if (action.country in this.options) {
+      if (action.country.toLowerCase() === this.state.questions[this.state.currentQuestionIndex].correctAnswer.toLowerCase()) {
+        this._send_action('answer_right', { 'correct_anwser': this.state.questions[this.state.currentQuestionIndex].correctAnswer });
+        this.handleOptionClick(true);
+      }
+      else {
+        this._send_action('answer_wrong', { 'correct_anwser': this.state.questions[this.state.currentQuestionIndex].correctAnswer });
+        this.handleOptionClick(true);
+      }
     }
     else {
-      console.log(this.state.questions[this.state.currentQuestionIndex].correctAnswer);
+      this._send_action('answer_no_match', { 'note': action.note })
     }
 
   }
