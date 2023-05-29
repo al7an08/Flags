@@ -2,7 +2,6 @@ import React from 'react'
 import { useState } from 'react';
 import { Stepper } from '@salutejs/plasma-ui'
 const MenuPage = (props) => {
-    const [value, setValue] = useState(10);
     const { setNumOfQuestions, handleStartGame, handleStartPage, numOfQuestions } = props;
     return (
         <div className='menuPage'>
@@ -14,7 +13,6 @@ const MenuPage = (props) => {
                 showRemove={false}
                 pin="circle-circle"
                 onChange={(value) => {
-                    setValue(value)
                     setNumOfQuestions(value)
                 }}
                 onRemove={() => console.log('onRemove')}
