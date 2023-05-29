@@ -216,9 +216,9 @@ export class App extends React.Component {
     });
   }
 
-  handleStartGame() {
+  handleStartGame(action) {
     resetUsedFlagIndexes();
-
+    this._send_action('startQuiz_action', { 'note': action.note });
     this.questions = [];
     for (this.i = 0; this.i < this.state.numOfQuestions; this.i++) {
       this.questions.push(flagsData[getRandomQuestionIndex()]);
