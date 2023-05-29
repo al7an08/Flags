@@ -128,11 +128,11 @@ export class App extends React.Component {
   country_choose_by_name(action) {
     console.log('country_choose_by_name', action);
 
-    if (action.country === this.currentQuestion.correctAnswer) {
+    if (action.country === this.state.questions[this.state.currentQuestionIndex].correctAnswer) {
       console.log('action.coutnry');
     }
     else {
-      console.log(this.currentQuestion.correctAnswer);
+      console.log(this.state.questions[this.state.currentQuestionIndex].correctAnswer);
     }
 
   }
