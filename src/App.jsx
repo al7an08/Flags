@@ -24,7 +24,9 @@ export class App extends React.Component {
     score: 0,
     showScore: false,
     showGame: false,
-    showHelp: false
+    showHelp: false,
+    currentQuestion: {},
+    questions: []
   };
 
   constructor(props) {
@@ -40,16 +42,18 @@ export class App extends React.Component {
     this.handleNumOfQuestionsChange = this.handleNumOfQuestionsChange.bind(this);
     this.handleShowMenu = this.handleShowMenu.bind(this);
     this.handleStartPage = this.handleStartPage.bind(this);
+    this.generate_current_question = this.generate_current_question.bind(this);
 
     this.state = {
-      notes: [],
       currentQuestionIndex: 0,
+      notes: [],
       score: 0,
       numOfQuestions: 10,
       showScore: false,
       showGame: false,
       showHelp: false,
-      showMenu: false
+      showMenu: false,
+      currentQuestion: {}
     };
 
     this.assistant = initializeAssistant(() => this.getStateForAssistant());
@@ -95,6 +99,8 @@ export class App extends React.Component {
           return this.main_menu(action);
         case 'choose_amount':
           return this.handleNumOfQuestionsChange(action.note);
+        case 'country_choose_by_name':
+          return this.country_choose_by_name(action);
         default:
           throw new Error();
       }
@@ -105,19 +111,32 @@ export class App extends React.Component {
     const data = {
       action: {
         action_id: action_id,
-        parameters: {   
-          value: value, 
+        parameters: {
+          value: value,
         }
       }
     };
     const unsubscribe = this.assistant.sendData(
       data,
-      (data) => {  
-        const {type, payload} = data;
+      (data) => {
+        const { type, payload } = data;
         console.log('sendData onData:', type, payload);
         unsubscribe();
       });
+  }
+
+  country_choose_by_name(action) {
+    console.log('country_choose_by_name', action);
+
+    if (action.country === this.currentQuestion.correctAnswer) {
+      console.log('action.coutnry');
     }
+    else {
+      console.log(this.currentQuestion.correctAnswer);
+    }
+
+  }
+
 
   choose_amount(action) {
     console.log('choose_amount', action)
@@ -198,7 +217,13 @@ export class App extends React.Component {
   }
 
   handleStartGame() {
-    resetUsedFlagIndexes()
+    resetUsedFlagIndexes();
+
+    this.questions = [];
+    for (this.i = 0; this.i < this.state.numOfQuestions; this.i++) {
+      this.questions.push(flagsData[getRandomQuestionIndex()]);
+    }
+
     this.setState({
       currentQuestionIndex: 0,
       showScore: false,
@@ -206,11 +231,13 @@ export class App extends React.Component {
       showHelp: false,
       score: 0,
       showGame: true,
+      questions: this.questions
     });
+    console.log(this.state.questions);
   }
 
   handleShowMenu(action) {
-    this._send_action('shMenu_action', {'note':action.note} );
+    this._send_action('shMenu_action', { 'note': action.note });
     this.setState({
       showMenu: true,
     })
@@ -218,7 +245,7 @@ export class App extends React.Component {
   }
 
   handleStartPage(action) {
-    this._send_action('startPage_action', {'note':action.note} );
+    this._send_action('startPage_action', { 'note': action.note });
     this.setState({
       currentQuestionIndex: 0,
       showScore: false,
@@ -240,12 +267,20 @@ export class App extends React.Component {
 
   handleHelp(action) {
     console.log('help');
-    this._send_action('help_action', {'note':action.note} );
+    this._send_action('help_action', { 'note': action.note });
     this.setState({
       showHelp: true,
       showMenu: false,
     });
   }
+
+  generate_current_question(obj) {
+
+    this.currentQuestion = obj;
+
+  }
+
+
 
   render() {
     console.log('render');
@@ -269,27 +304,28 @@ export class App extends React.Component {
     if (this.state.showHelp && !this.state.showMenu) {
       return (
         <div className="wrapper">
-          <HelpPage handleHelp={this.handleHelp} handleStartPage={this.handleStartPage}/>
+          <HelpPage handleHelp={this.handleHelp} handleStartPage={this.handleStartPage} />
         </div>
       );
     }
-    const currentQuestion = flagsData[getRandomQuestionIndex()];
+
+
+
 
     return (
-      <>
-        <div className="wrapper">
-          {!this.state.showScore ? (
-            <QuestionPage
-              currentQuestion={this.state.currentQuestionIndex + 1}
-              question={currentQuestion}
-              score={this.state.score}
-              handleOptionClick={this.handleOptionClick}
-            />
-          ) : (
-            <GameOverPage score={this.state.score} handleRestartClick={this.handleRestartClick} />
-          )}
-        </div>
-      </>
+      <div className="wrapper">
+        {console.log(this.currentQuestion)}
+        {!this.state.showScore ? (
+          <QuestionPage
+            currentQuestion={this.state.currentQuestionIndex + 1}
+            question={this.state.questions[this.state.currentQuestionIndex]}
+            score={this.state.score}
+            handleOptionClick={this.handleOptionClick}
+          />
+        ) : (
+          <GameOverPage score={this.state.score} handleRestartClick={this.handleRestartClick} />
+        )}
+      </div>
     );
   }
 }
