@@ -247,11 +247,10 @@ export class App extends React.Component {
     if (this.state.showHelp && !this.state.showMenu) {
       return (
         <div className="wrapper">
-          <HelpPage handleHelp={this.handleHelp} />
+          <HelpPage handleHelp={this.handleHelp} handleStartPage={this.handleStartPage}/>
         </div>
       );
     }
-
     const currentQuestion = flagsData[getRandomQuestionIndex()];
 
     return (
