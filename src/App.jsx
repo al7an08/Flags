@@ -7,6 +7,7 @@ import GameOverPage from "./pages/GameOverPage";
 import StartPage from "./pages/StartPage";
 import HelpPage from "./pages/HelpPage";
 import MenuPage from "./pages/MenuPage";
+import { act } from "react-dom/test-utils";
 
 const initializeAssistant = (getState) => {
   if (process.env.NODE_ENV === "development") {
@@ -100,10 +101,28 @@ export class App extends React.Component {
     }
   }
 
+  _send_action(action_id, value) {
+    const data = {
+      action: {
+        action_id: action_id,
+        parameters: {   
+          value: value, 
+        }
+      }
+    };
+    const unsubscribe = this.assistant.sendData(
+      data,
+      (data) => {  
+        const {type, payload} = data;
+        console.log('sendData onData:', type, payload);
+        unsubscribe();
+      });
+    }
+
   choose_amount(action) {
     console.log('choose_amount', action)
 
-    console.log("АААААААААААААААА НЕГРЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫ")
+    console.log("choose_amount  ")
     this.handleNumOfQuestionsChange(Number(action.note));
 
     // console.log(action.number)
@@ -112,21 +131,21 @@ export class App extends React.Component {
   main_menu(action) {
     console.log('main_menu', action)
 
-    this.handleStartPage();
+    this.handleStartPage(action);
   }
 
 
   start_quiz(action) {
     console.log('start_quiz', action)
 
-    this.handleStartGame();
+    this.handleStartGame(action);
   }
 
 
   start_game(action) {
     console.log('start_game', action);
 
-    this.handleShowMenu();
+    this.handleShowMenu(action);
 
   }
 
@@ -139,7 +158,7 @@ export class App extends React.Component {
   help(action) {
     console.log('help', action);
 
-    this.handleHelp();
+    this.handleHelp(action);
   }
 
 
@@ -190,14 +209,16 @@ export class App extends React.Component {
     });
   }
 
-  handleShowMenu() {
+  handleShowMenu(action) {
+    this._send_action('shMenu_action', {'note':action.note} );
     this.setState({
       showMenu: true,
     })
     console.log(this.state.showMenu)
   }
 
-  handleStartPage() {
+  handleStartPage(action) {
+    this._send_action('startPage_action', {'note':action.note} );
     this.setState({
       currentQuestionIndex: 0,
       showScore: false,
@@ -217,8 +238,9 @@ export class App extends React.Component {
     }
   }
 
-  handleHelp() {
-    console.log('AAAAVDABDABDABA');
+  handleHelp(action) {
+    console.log('help');
+    this._send_action('help_action', {'note':action.note} );
     this.setState({
       showHelp: true,
       showMenu: false,
