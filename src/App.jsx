@@ -203,7 +203,7 @@ export class App extends React.Component {
           currentQuestionIndex: nextQuestionIndex,
         });
       } else {
-        this._send_action('game_over', { 'note': action.note })
+        this._send_action('game_over', { 'note': this.state.score })
         this.setState({
           showScore: true,
         });
