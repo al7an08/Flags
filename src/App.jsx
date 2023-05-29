@@ -135,7 +135,7 @@ export class App extends React.Component {
       }
       else {
         this._send_action('answer_wrong', { 'correct_anwser': this.state.questions[this.state.currentQuestionIndex].correctAnswer });
-        this.handleOptionClick(true);
+        this.handleOptionClick(false);
       }
     }
     else {
