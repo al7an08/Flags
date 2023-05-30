@@ -3,7 +3,7 @@ import { Transition } from 'react-transition-group'
 import { useState, useEffect } from 'react';
 
 
-const Question = ({ handleOptionClick, question }) => {
+const Question = ({ handleOptionClick, question, answer_received }) => {
   const { options, flagUrl, correctAnswer } = question;
   const [imgVisible, setImgVisible] = useState(false);
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
@@ -17,9 +17,18 @@ const Question = ({ handleOptionClick, question }) => {
     }, 3000);
   };
 
+
+
   useEffect(() => {
     setImgVisible(true);
     console.log('Update');
+    if (answer_received) {
+      setTimeout(() => setImgVisible(false), 3000);
+      setIsButtonDisabled(true);
+      setTimeout(() => {
+        setIsButtonDisabled(false);
+      }, 3000)
+    }
   })
 
 

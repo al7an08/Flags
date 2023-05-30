@@ -26,12 +26,14 @@ export class App extends React.Component {
     showGame: false,
     showHelp: false,
     currentQuestion: {},
-    questions: []
+    questions: [],
+    answer_received: false
   };
 
   constructor(props) {
     super(props);
 
+    this.country_choose_by_name = this.country_choose_by_name.bind(this);
     this.help = this.help.bind(this);
     this.choose_amount = this.choose_amount.bind(this);
     this.start_game = this.start_game.bind(this);
@@ -53,7 +55,8 @@ export class App extends React.Component {
       showGame: false,
       showHelp: false,
       showMenu: false,
-      currentQuestion: {}
+      currentQuestion: {},
+      answer_received: false
     };
 
     this.assistant = initializeAssistant(() => this.getStateForAssistant());
@@ -128,16 +131,23 @@ export class App extends React.Component {
   country_choose_by_name(action) {
     console.log('country_choose_by_name', action);
     this.options = this.state.questions[this.state.currentQuestionIndex].options.map(option => (option.toLowerCase()));
-    if (action.country in this.options) {
-      if (action.country.toLowerCase() === this.state.questions[this.state.currentQuestionIndex].correctAnswer.toLowerCase()) {
-        this._send_action('answer_right', { 'correct_anwser': this.state.questions[this.state.currentQuestionIndex].correctAnswer });
+    if (this.options.includes(action.country_name)) {
+      if (action.country_name.toLowerCase() === this.state.questions[this.state.currentQuestionIndex].correctAnswer.toLowerCase()) {
+        // this._send_action('answer_right', { 'note': this.state.questions[this.state.currentQuestionIndex].correctAnswer });
         this.handleOptionClick(true);
+        this.setState({
+          answer_received: true
+        })
       }
       else {
-        this._send_action('answer_wrong', { 'correct_anwser': this.state.questions[this.state.currentQuestionIndex].correctAnswer });
+        // this._send_action('answer_wrong', { 'note': this.state.questions[this.state.currentQuestionIndex].correctAnswer });
         this.handleOptionClick(false);
+        this.setState({
+          answer_received: true
+        })
       }
     }
+
     else {
       this._send_action('answer_no_match', { 'note': action.note })
     }
@@ -189,6 +199,12 @@ export class App extends React.Component {
 
 
   handleOptionClick(isCorrect) {
+    if (isCorrect) {
+      this._send_action('answer_right', { 'note': this.state.questions[this.state.currentQuestionIndex].correctAnswer });
+    }
+    else {
+      this._send_action('answer_wrong', { 'note': this.state.questions[this.state.currentQuestionIndex].correctAnswer });
+    }
 
     setTimeout(() => {
       if (isCorrect) {
@@ -200,14 +216,18 @@ export class App extends React.Component {
 
       if (nextQuestionIndex < this.state.numOfQuestions) {
         this.setState({
+          answer_received: false,
           currentQuestionIndex: nextQuestionIndex,
         });
       } else {
         this._send_action('game_over', { 'note': this.state.score })
         this.setState({
           showScore: true,
+          answer_received: false,
         });
       }
+
+
 
       console.log('click' + isCorrect);
     }, 3000)
@@ -329,6 +349,7 @@ export class App extends React.Component {
             question={this.state.questions[this.state.currentQuestionIndex]}
             score={this.state.score}
             handleOptionClick={this.handleOptionClick}
+            answer_received={this.state.answer_received}
           />
         ) : (
           <GameOverPage score={this.state.score} handleRestartClick={this.handleRestartClick} />
