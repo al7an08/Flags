@@ -82,7 +82,7 @@ export const flagsData = [
     options: []
   },
   {
-    flagUrl: url+ 'by.png',
+    flagUrl: url+ 'by_.png',
     correctAnswer: 'Беларусь',
     options: []
   },
