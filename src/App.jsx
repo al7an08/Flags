@@ -7,7 +7,6 @@ import GameOverPage from "./pages/GameOverPage";
 import StartPage from "./pages/StartPage";
 import HelpPage from "./pages/HelpPage";
 import MenuPage from "./pages/MenuPage";
-import { act } from "react-dom/test-utils";
 
 const initializeAssistant = (getState) => {
   if (process.env.NODE_ENV === "development") {
@@ -200,10 +199,10 @@ export class App extends React.Component {
 
   handleOptionClick(isCorrect) {
     if (isCorrect) {
-      this._send_action('answer_right', { 'note': this.state.questions[this.state.currentQuestionIndex].correctAnswer });
+      this._send_action('answer_right', this.state.questions[this.state.currentQuestionIndex].correctAnswer);
     }
     else {
-      this._send_action('answer_wrong', { 'note': this.state.questions[this.state.currentQuestionIndex].correctAnswer });
+      this._send_action('answer_wrong', this.state.questions[this.state.currentQuestionIndex].correctAnswer);
     }
 
     setTimeout(() => {
@@ -220,7 +219,7 @@ export class App extends React.Component {
           currentQuestionIndex: nextQuestionIndex,
         });
       } else {
-        this._send_action('game_over', { 'note': this.state.score })
+        this._send_action('game_over', this.state.score)
         this.setState({
           showScore: true,
           answer_received: false,
@@ -234,7 +233,10 @@ export class App extends React.Component {
   }
 
   handleRestartClick() {
-    resetUsedFlagIndexes()
+    resetUsedFlagIndexes();
+
+    this._send_action('restart', { 'note': 'restart' });
+
     this.setState({
       currentQuestionIndex: 0,
       showScore: false,
@@ -358,4 +360,3 @@ export class App extends React.Component {
     );
   }
 }
-//Иби меня 
