@@ -26,7 +26,8 @@ export class App extends React.Component {
     showHelp: false,
     currentQuestion: {},
     questions: [],
-    answer_received: false
+    answer_received: false,
+    numOfQuestions: 5
   };
 
   constructor(props) {
@@ -49,7 +50,7 @@ export class App extends React.Component {
       currentQuestionIndex: 0,
       notes: [],
       score: 0,
-      numOfQuestions: 10,
+      numOfQuestions: 5,
       showScore: false,
       showGame: false,
       showHelp: false,
