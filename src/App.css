@@ -23,7 +23,6 @@
   text-decoration: none;
   display: inline-block;
   color: white;
-  /* padding: 20px 30px; */
   padding: 0 auto;
   margin: 10px 1vw;
   border-radius: 10px;  
@@ -37,7 +36,7 @@
   background-size: 200% auto;
   box-shadow: 0 0 20px rgba(0, 0, 0, .1);
   transition: .5s;
-  white-space: nowrap;
+  white-space: normal;
 }
 
 .button:hover {
