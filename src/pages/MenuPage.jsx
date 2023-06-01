@@ -1,15 +1,11 @@
 import React from 'react'
-import { useState } from 'react';
 import { StepperValue, StepperButton, StepperRoot } from '@salutejs/plasma-ui'
-import { IconPlus, IconMinus, IconClose } from '@salutejs/plasma-icons';
+import { IconPlus, IconMinus } from '@salutejs/plasma-icons';
 const MenuPage = (props) => {
     const { setNumOfQuestions, handleStartGame, handleStartPage, numOfQuestions } = props;
     const max = 100;
     const min = 5;
     const step = 1;
-
-    const [minusDisabled, setMinusDisabled] = useState(false);
-    const [plusDisabled, setPlusDisabled] = useState(false);
 
     return (
         <div className='menuPage'>
