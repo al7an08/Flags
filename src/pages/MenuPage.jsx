@@ -1,12 +1,20 @@
 import React from 'react'
 import { useState } from 'react';
-import { Stepper } from '@salutejs/plasma-ui'
+import { StepperValue, StepperButton, StepperRoot } from '@salutejs/plasma-ui'
+import { IconPlus, IconMinus, IconClose } from '@salutejs/plasma-icons';
 const MenuPage = (props) => {
     const { setNumOfQuestions, handleStartGame, handleStartPage, numOfQuestions } = props;
+    const max = 100;
+    const min = 5;
+    const step = 1;
+
+    const [minusDisabled, setMinusDisabled] = useState(false);
+    const [plusDisabled, setPlusDisabled] = useState(false);
+
     return (
         <div className='menuPage'>
             <h1 className='text'>Количество вопросов</h1>
-            <Stepper className='stepper' step={1}
+            {/* <Stepper className='stepper' step={1}
                 value={numOfQuestions}
                 min={5}
                 max={100}
@@ -20,7 +28,28 @@ const MenuPage = (props) => {
                 onBlur={() => console.log('onBlur')}
                 ariaLabelRemove="Удалить"
                 ariaLabelDecrement="Уменьшить значение"
-                ariaLabelIncrement="Увеличить значение" />
+                ariaLabelIncrement="Увеличить значение" /> */}
+            <StepperRoot className='stepper'>
+                <StepperButton
+                    aria-label="Уменьшить значение"
+                    view={'secondary'}
+                    icon={<IconMinus color="inherit" size="l" />}
+                    onClick={() => {
+                        setNumOfQuestions(Math.max(parseInt(numOfQuestions) - step, min))
+                    }}
+                    disabled={numOfQuestions <= min}
+                />
+                <StepperValue value={parseInt(numOfQuestions)} disabled={false} showWarning={false} />
+                <StepperButton
+                    aria-label="Увеличить значение"
+                    view="secondary"
+                    icon={<IconPlus color="inherit" size="l" />}
+                    disabled={numOfQuestions >= max}
+                    onClick={() => {
+                        setNumOfQuestions(Math.min(parseInt(numOfQuestions) + step, max))
+                    }}
+                />
+            </StepperRoot>
             <button className='button' onClick={handleStartGame}>Продолжить</button>
             <button className='button' onClick={handleStartPage}>Вернуться в главное меню</button>
         </div>
