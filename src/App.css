@@ -26,7 +26,7 @@
   padding: 0 auto;
   margin: 10px 1vw;
   border-radius: 10px;
-  font-size: 170%;
+  font-size: 200%;
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
   text-transform: uppercase;
@@ -101,7 +101,7 @@
 
 .wrapper {
   max-width: 1170px;
-  padding: 1%;
+  /* padding: 1%; */
   margin: 0 auto;
   padding-left: 16px;
   padding-right: 16px;
