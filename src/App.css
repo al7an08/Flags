@@ -18,12 +18,12 @@
 
 .button {
   width: 40vw;
-  word-break: keep-all;
+  word-break: break-word;
   height: 13vh;
   text-decoration: none;
   display: inline-block;
   color: white;
-  padding: 0 auto;
+  padding: 0;
   margin: 10px 1vw;
   border-radius: 10px;
   font-size: 200%;
@@ -38,7 +38,7 @@
   transition: .5s;
   overflow: hidden;
   /* Added property */
-  white-space: nowrap;
+  white-space: break-spaces;
   /* Added property */
 }
 
