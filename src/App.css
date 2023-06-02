@@ -36,6 +36,10 @@
   background-size: 200% auto;
   box-shadow: 0 0 20px rgba(0, 0, 0, .1);
   transition: .5s;
+  overflow: hidden;
+  /* Added property */
+  white-space: nowrap;
+  /* Added property */
 }
 
 @media (max-width: 480px) {
@@ -89,6 +93,14 @@
 
 .button:disabled {
   background-position: 0;
+}
+
+.button span {
+  display: inline-block;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 
