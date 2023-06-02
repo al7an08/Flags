@@ -148,6 +148,22 @@ export class App extends React.Component {
       }
     }
 
+    else if (action.country_name === '1' | action.country_name === '2' | action.country_name === '3' | action.country_name === '4') {
+      if (this.options[parseInt(action.country_name) - 1] === this.state.questions[this.state.currentQuestionIndex].correctAnswer.toLowerCase()) {
+        // this._send_action('answer_right', { 'note': this.state.questions[this.state.currentQuestionIndex].correctAnswer });
+        this.handleOptionClick(true);
+        this.setState({
+          answer_received: true
+        })
+      }
+      else {
+        // this._send_action('answer_wrong', { 'note': this.state.questions[this.state.currentQuestionIndex].correctAnswer });
+        this.handleOptionClick(false);
+        this.setState({
+          answer_received: true
+        })
+      }
+    }
     else {
       this._send_action('answer_no_match', { 'note': action.note })
     }
