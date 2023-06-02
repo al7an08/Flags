@@ -40,13 +40,13 @@
 
 @media (max-width: 480px) {
   .button {
-    width: 45vw;
+    width: 49vw;
     height: 13vh;
     text-decoration: none;
     display: inline-block;
     color: white;
     /* padding: 20px 30px; */
-    padding: 0 auto;
+    padding: 0;
     margin: 10px 1vw;
     border-radius: 10px;
     font-family: 'Montserrat', sans-serif;
