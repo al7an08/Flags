@@ -35,7 +35,7 @@ const MenuPage = (props) => {
         />
       </StepperRoot>
       <button className='button' onClick={handleStartGame}>Продолжить</button>
-      <button className='button' onClick={handleStartPage}>Вернуться в главное меню</button>
+      <button className='button' onClick={handleStartPage}>Главное меню</button>
     </div>
   )
 }
