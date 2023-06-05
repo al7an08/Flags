@@ -7,7 +7,7 @@ const HelpPage = ({ handleStartPage }) => {
             <p className='text'>На экране будет показан флаг страны, Вам необходимо, выбрав один из вариантов, угадать какой стране принадлежит данный флаг. Удачной игры!</p>
             <button className='button' onClick={handleStartPage} style={{
                 width: 'fit-content',
-            }}>Вернуться назад</button>
+            }}>Главное меню</button>
         </div>
     )
 }
