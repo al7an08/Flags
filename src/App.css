@@ -43,7 +43,7 @@
   /* Added property */
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1280px) {
   .button {
     width: 47vw;
     height: 13vh;
