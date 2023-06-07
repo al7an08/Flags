@@ -236,7 +236,7 @@ export class App extends React.Component {
           currentQuestionIndex: nextQuestionIndex,
         });
       } else {
-        this._send_action('game_over', this.state.score)
+        this._send_action('game_over', isCorrect ? this.state.score + 1 : this.state.score)
         this.setState({
           showScore: true,
           answer_received: false,
