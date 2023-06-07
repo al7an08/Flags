@@ -16,6 +16,8 @@ const initializeAssistant = (getState) => {
   return createAssistant({ getState });
 };
 
+
+
 export class App extends React.Component {
   state = {
     notes: [],

@@ -43,10 +43,10 @@ const Question = ({ handleOptionClick, question, answer_received }) => {
         <img rel="preload" className={`flagImage`} src={flagUrl} alt='' />
         <div className='answers'>
           {options.map((option, index) => (
-            <button disabled={isButtonDisabled} style={isButtonDisabled ? (option !== correctAnswer ? { backgroundImage: 'linear-gradient(90deg, #d82b56,#be264c,#920c2d)' } : { backgroundImage: 'linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147))' }) : {}} key={index} onClick={() => {
+            <button disabled={isButtonDisabled} style={isButtonDisabled ? (option !== correctAnswer ? { backgroundImage: 'linear-gradient(90deg, #d82b56,#be264c,#920c2d)' } : { backgroundImage: 'linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147))' }) : {}} key={parseInt(index)} onClick={() => {
               handleButtonClick(option === correctAnswer);
             }} className='button'>
-              {`${index + 1}. ${option}`}
+              {`${parseInt(index) + 1}. ${option}`}
             </button>
           ))}
         </div>
