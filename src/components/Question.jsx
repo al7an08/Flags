@@ -19,8 +19,8 @@ const Question = ({ handleOptionClick, question, answer_received }) => {
   const handleButtonClick = (isCorrect) => {
     handleOptionClick(isCorrect);
     setTimeout(() => setImgVisible(false), 3000);
-    setIsButtonDisabled(true);
     setButtonFocus();
+    setIsButtonDisabled(true);
     setTimeout(() => {
       setIsButtonDisabled(false);
     }, 3000);
@@ -29,6 +29,7 @@ const Question = ({ handleOptionClick, question, answer_received }) => {
 
 
   useEffect(() => {
+    setButtonFocus();
     setImgVisible(true);
     if (answer_received) {
       setTimeout(() => setImgVisible(false), 3000);
