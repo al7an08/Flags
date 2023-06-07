@@ -6,7 +6,7 @@ const GameOverPage = (props) => {
     return (
         <div className='gameOverPage'>
             <h1 className='text' style={{ textAlign: 'center' }}>Правильных ответов: {score}</h1>
-            <button className='button' style={{ textAlign: 'center' }} onClick={handleRestartClick}>Играть ещё раз</button>
+            <button autoFocus={true} className='button' style={{ textAlign: 'center' }} onClick={handleRestartClick}>Играть ещё раз</button>
         </div>
     )
 }
