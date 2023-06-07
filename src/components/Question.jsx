@@ -1,25 +1,26 @@
 import React from 'react';
 import { Transition } from 'react-transition-group'
-import { useState, useEffect, findDOMNode, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
+const useFocus = () => {
+  const htmlElRef = useRef(null)
+  const setFocus = () => { htmlElRef.current && htmlElRef.current.focus() }
+
+  return [htmlElRef, setFocus]
+}
 
 const Question = ({ handleOptionClick, question, answer_received }) => {
   const { options, flagUrl, correctAnswer } = question;
   const [imgVisible, setImgVisible] = useState(false);
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
-  const [focus, setFocus] = useState(false);
+  const [buttonRef, setButtonFocus] = useFocus()
 
-  const focusElementReference = useRef < HTMLInputElement > (null);
 
   const handleButtonClick = (isCorrect) => {
     handleOptionClick(isCorrect);
     setTimeout(() => setImgVisible(false), 3000);
     setIsButtonDisabled(true);
-    setFocus(false);
-    setTimeout(() => {
-      setFocus(true);
-      focusElementReference.current?.focus();
-    }, 3000);
+    setButtonFocus();
     setTimeout(() => {
       setIsButtonDisabled(false);
     }, 3000);
@@ -53,7 +54,7 @@ const Question = ({ handleOptionClick, question, answer_received }) => {
         <img rel="preload" className={`flagImage`} src={flagUrl} alt='' />
         <div className='answers'>
           {options.map((option, index) => (
-            <button id={"Button" + (index + 1)} ref={index === 0 ? focusElementReference : 0} autoFocus={index === 0 && !isButtonDisabled ? true : false} disabled={isButtonDisabled} style={isButtonDisabled ? (option !== correctAnswer ? { backgroundImage: 'linear-gradient(90deg, #d82b56,#be264c,#920c2d)' } : { backgroundImage: 'linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147))' }) : {}} key={parseInt(index)} onClick={() => {
+            <button id={"Button" + (index + 1)} ref={index === 0 ? buttonRef : null} autoFocus={index === 0 && !isButtonDisabled ? true : false} disabled={isButtonDisabled} style={isButtonDisabled ? (option !== correctAnswer ? { backgroundImage: 'linear-gradient(90deg, #d82b56,#be264c,#920c2d)' } : { backgroundImage: 'linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147))' }) : {}} key={parseInt(index)} onClick={() => {
               handleButtonClick(option === correctAnswer);
             }} className='button'>
               {`${parseInt(index) + 1}. ${option}`}
