@@ -267,7 +267,8 @@
     left: 0;
     width: fit-content;
     margin-right: 1vh;
-    margin-top: 1%;
+    margin-top: 1%
+    height: 1vh;
   }
 
   .score {
@@ -275,7 +276,8 @@
     left: 50vw;
     width: fit-content;
     margin-right: 1vh;
-    margin-top: 1%
+    margin-top: 1%;
+    height: 1vh;
   }
 }
 
@@ -284,7 +286,7 @@
   top: 2vh; /* Adjust the value as needed */
   right: 2vh; /* Adjust the value as needed */
   width: 20vw;
-  height: fit-content;
+  height: 1vh;
 
   text-decoration: none;
   display: inline-block;
