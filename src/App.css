@@ -47,6 +47,7 @@
   .button:focus {
     outline: none;
     border: 20px solid white;
+    background-position: right center;
   }
 
   .button:hover {
