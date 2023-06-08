@@ -346,3 +346,7 @@
   justify-self: center;
   margin: 3% auto;
 }
+
+:focus {
+  outline: none;
+}
