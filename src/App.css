@@ -282,7 +282,8 @@
   top: 2vh; /* Adjust the value as needed */
   right: 2vh; /* Adjust the value as needed */
   width: 20vw;
-  height: 10vh;
+  height: fit-content;
+
   text-decoration: none;
   display: inline-block;
   color: white;
