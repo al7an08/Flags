@@ -263,12 +263,12 @@
 
 @media (max-width: 1100px) {
   .currentQuestion {
-    font-size: 20px; /* Set the desired font size when the width is 1080px */
+    font-size: 17px; /* Set the desired font size when the width is 1080px */
     left: 0vw; /* Adjust the value as needed */
   }
 
   .score {
-    font-size: 20px; /* Set the desired font size when the width is 1080px */
+    font-size: 17px; /* Set the desired font size when the width is 1080px */
     left: 50vw; /* Adjust the value as needed */
   }
 }
