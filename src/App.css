@@ -261,7 +261,7 @@
   margin: 2vh 0;
 }
 
-@media (min-width: 1080px) {
+@media (min-width: 1200px) {
   .currentQuestion {
     font-size: 40px; /* Set the desired font size when the width is 1080px */
     left: 0vw; /* Adjust the value as needed */
