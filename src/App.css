@@ -45,8 +45,8 @@
 
 @media (min-width: 1920px) {
   .button:focus {
-    outline: white 1vh solid;
-    border-radius: 10px;
+    outline: none;
+    border: 6px solid white;
   }
 
   .button:hover {
