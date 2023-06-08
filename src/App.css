@@ -45,7 +45,7 @@
 
 @media (min-width: 1920px) {
   .button:focus {
-    outline: 20px solid white;
+    outline: 5px solid white;
     box-shadow: 0 0 3pt 2pt white;
     /* border: 20px solid white; */
     background-position: right center;
