@@ -45,14 +45,13 @@
 
 @media (min-width: 1920px) {
   .button:focus {
-    outline: none;
-    border: white 1vh solid;
+    outline: white 1vh solid;
   }
 
   .button:hover {
     background-position: right center;
     /* background-image: linear-gradient(to right, #336c5c 0%, #2c1a4c 51%, #32a8a0 100%); */
-    border: 0;
+    border: 0 none #0083ff;
   }
 }
 

@@ -22,7 +22,7 @@ export const flagsData = [
     options: []
   },
   {
-    flagUrl: url+ 'ao.png',
+    flagUrl: url + 'ao.png',
     correctAnswer: 'Ангола',
     options: []
   },
@@ -37,7 +37,7 @@ export const flagsData = [
     options: []
   },
   {
-    flagUrl: url+ 'am.png',
+    flagUrl: url + 'am.png',
     correctAnswer: 'Армения',
     options: []
   },
@@ -62,7 +62,7 @@ export const flagsData = [
     options: []
   },
   {
-    flagUrl: url+ 'bs.png',
+    flagUrl: url + 'bs.png',
     correctAnswer: 'Багамы',
     options: []
   },
@@ -82,7 +82,7 @@ export const flagsData = [
     options: []
   },
   {
-    flagUrl: url+ 'by_.png',
+    flagUrl: url + 'by_.png',
     correctAnswer: 'Беларусь',
     options: []
   },
@@ -92,7 +92,7 @@ export const flagsData = [
     options: []
   },
   {
-    flagUrl: url+ 'bz.png',
+    flagUrl: url + 'bz.png',
     correctAnswer: 'Белиз',
     options: []
   },
@@ -202,11 +202,6 @@ export const flagsData = [
     options: []
   },
   {
-    flagUrl: url + 'ci.png',
-    correctAnswer: 'Кот-д,Ивуар',
-    options: []
-  },
-  {
     flagUrl: url + 'hr.png',
     correctAnswer: 'Хорватия',
     options: []
@@ -257,22 +252,22 @@ export const flagsData = [
     options: []
   },
   {
-    flagUrl: url+ 'eg.png',
+    flagUrl: url + 'eg.png',
     correctAnswer: 'Египет',
     options: []
   },
   {
-    flagUrl: url+ 'sv.png',
+    flagUrl: url + 'sv.png',
     correctAnswer: 'Сальвадор',
     options: []
   },
   {
-    flagUrl: url+ 'er.png',
+    flagUrl: url + 'er.png',
     correctAnswer: 'Эритрея',
     options: []
   },
   {
-    flagUrl: url+ 'ee.png',
+    flagUrl: url + 'ee.png',
     correctAnswer: 'Эстония',
     options: []
   },
@@ -607,7 +602,7 @@ export const flagsData = [
     correctAnswer: 'Непал',
     options: []
   },
-    {
+  {
     flagUrl: url + 'nl.png',
     correctAnswer: 'Нидерланды',
     options: []
@@ -616,7 +611,7 @@ export const flagsData = [
     flagUrl: url + 'nz.png',
     correctAnswer: 'Новая Зеландия',
     options: []
-  },  {
+  }, {
     flagUrl: url + 'ni.png',
     correctAnswer: 'Никарагуа',
     options: []
@@ -665,7 +660,7 @@ export const flagsData = [
     options: []
   },
 
-    {
+  {
     flagUrl: url + 'pg.png',
     correctAnswer: 'Папуа — Новая Гвинея',
     options: []
@@ -682,7 +677,7 @@ export const flagsData = [
     options: []
   },
 
-    {
+  {
     flagUrl: url + 'ph.png',
     correctAnswer: 'Филиппины',
     options: []
@@ -727,7 +722,7 @@ export const flagsData = [
     options: []
   },
 
-    {
+  {
     flagUrl: url + 'ws.png',
     correctAnswer: 'Самоа',
     options: []
@@ -780,242 +775,242 @@ export const flagsData = [
     options: []
   },
 
-    {
-    flagUrl: url+ 'si.png',
+  {
+    flagUrl: url + 'si.png',
     correctAnswer: 'Словения',
     options: []
-  },  {
-    flagUrl: url+ 'sb.png',
+  }, {
+    flagUrl: url + 'sb.png',
     correctAnswer: 'Соломоновы Острова',
     options: []
   },
   {
-    flagUrl: url+ 'so.png',
+    flagUrl: url + 'so.png',
     correctAnswer: 'Сомали',
     options: []
   },
   {
-    flagUrl: url+ 'za.png',
+    flagUrl: url + 'za.png',
     correctAnswer: 'Южная Африка',
     options: []
   },
   {
-    flagUrl: url+ 'ss.png',
+    flagUrl: url + 'ss.png',
     correctAnswer: 'Южный Судан',
     options: []
   },
   {
-    flagUrl: url+ 'es.png',
+    flagUrl: url + 'es.png',
     correctAnswer: 'Испания',
     options: []
   },
   {
-    flagUrl: url+ 'lk.png',
+    flagUrl: url + 'lk.png',
     correctAnswer: 'Шри Ланка',
     options: []
   },
   {
-    flagUrl: url+ 'sd.png',
+    flagUrl: url + 'sd.png',
     correctAnswer: 'Судан',
     options: []
   },
   {
-    flagUrl: url+ 'sr.png',
+    flagUrl: url + 'sr.png',
     correctAnswer: 'Суринам',
     options: []
   },
   {
-    flagUrl: url+ 'se.png',
+    flagUrl: url + 'se.png',
     correctAnswer: 'Швеция',
     options: []
   },
   {
-    flagUrl: url+ 'ch.png',
+    flagUrl: url + 'ch.png',
     correctAnswer: 'Швейцария',
     options: []
   },
   {
-    flagUrl: url+ 'sy.png',
+    flagUrl: url + 'sy.png',
     correctAnswer: 'Сирия',
     options: []
   },
   {
-    flagUrl: url+ 'tw.png',
+    flagUrl: url + 'tw.png',
     correctAnswer: 'Тайвань',
     options: []
   },
   {
-    flagUrl: url+ 'tj.png',
+    flagUrl: url + 'tj.png',
     correctAnswer: 'Таджикистан',
     options: []
   },
   {
-    flagUrl: url+ 'tz.png',
+    flagUrl: url + 'tz.png',
     correctAnswer: 'Танзания',
     options: []
   },
   {
-    flagUrl: url+ 'th.png',
+    flagUrl: url + 'th.png',
     correctAnswer: 'Таиланд',
     options: []
   },
   {
-    flagUrl: url+ 'tg.png',
+    flagUrl: url + 'tg.png',
     correctAnswer: 'Того',
     options: []
   },
 
   {
-    flagUrl: url+ 'to.png',
+    flagUrl: url + 'to.png',
     correctAnswer: 'Тонга',
     options: []
   },
   {
-    flagUrl: url+ 'tt.png',
+    flagUrl: url + 'tt.png',
     correctAnswer: 'Тринидад и Тобаго',
     options: []
   },
   {
-    flagUrl: url+ 'tn.png',
+    flagUrl: url + 'tn.png',
     correctAnswer: 'Тунис',
     options: []
   },
 
   {
-    flagUrl: url+ 'tr.png',
+    flagUrl: url + 'tr.png',
     correctAnswer: 'Турция',
     options: []
   },
   {
-    flagUrl: url+ 'tm.png',
+    flagUrl: url + 'tm.png',
     correctAnswer: 'Туркменистан',
     options: []
   },
   {
-    flagUrl: url+ 'tv.png',
+    flagUrl: url + 'tv.png',
     correctAnswer: 'Тувалу',
     options: []
   },
 
   {
-    flagUrl: url+ 'ug.png',
+    flagUrl: url + 'ug.png',
     correctAnswer: 'Уганда',
     options: []
   },
   {
-    flagUrl: url+ 'ua.png',
+    flagUrl: url + 'ua.png',
     correctAnswer: 'Украина',
     options: []
   },
   {
-    flagUrl: url+ 'ae.png',
+    flagUrl: url + 'ae.png',
     correctAnswer: 'ОАЭ',
     options: []
   },
   {
-    flagUrl: url+ 'us.png',
+    flagUrl: url + 'us.png',
     correctAnswer: 'США',
     options: []
   },
 
-    {
-    flagUrl: url+ 'uy.png',
+  {
+    flagUrl: url + 'uy.png',
     correctAnswer: 'Уругвай',
     options: []
   },
   {
-    flagUrl: url+ 'uz.png',
+    flagUrl: url + 'uz.png',
     correctAnswer: 'Узбекистан',
     options: []
   },
   {
-    flagUrl: url+ 'vu.png',
+    flagUrl: url + 'vu.png',
     correctAnswer: 'Вануату',
     options: []
   },
   {
-    flagUrl: url+ 'va.png',
+    flagUrl: url + 'va.png',
     correctAnswer: 'Ватикан',
     options: []
   },
 
   {
-    flagUrl: url+ 've.png',
+    flagUrl: url + 've.png',
     correctAnswer: 'Венесуэла',
     options: []
   },
   {
-    flagUrl: url+ 'vn.png',
+    flagUrl: url + 'vn.png',
     correctAnswer: 'Вьетнам',
     options: []
   },
 
   {
-    flagUrl: url+ 'ye.png',
+    flagUrl: url + 'ye.png',
     correctAnswer: 'Йемен',
     options: []
   },
   {
-    flagUrl: url+ 'zm.png',
+    flagUrl: url + 'zm.png',
     correctAnswer: 'Замбия',
     options: []
   },
   {
-    flagUrl: url+ 'zw.png',
+    flagUrl: url + 'zw.png',
     correctAnswer: 'Зимбабве',
     options: []
   },
 
   {
-    flagUrl: url+ 'abkhazia.png',
+    flagUrl: url + 'abkhazia.png',
     correctAnswer: 'Абхазия',
     options: []
   },
   {
-    flagUrl: url+ 'south_ossetia.png',
+    flagUrl: url + 'south_ossetia.png',
     correctAnswer: 'Южная Осетия',
     options: []
   },
 ];
 
-export const answers = 
-['Нигерия', 'Ирландия', 'Маршалловы Острова', 'Португалия', 'Австралия', 'Гвинея Бисау', 'Италия', 'Япония', 'Ямайка', 'Лихтенштейн', 'Азербайджан', 'Боливия', 'Египет', 'Албания', 
-'Замбия', 'Сейшелы', 'Тувалу', 'Монголия', 'Руанда', 'Мальта', 'Филиппины', 'Эстония', 'Черногория', 'Мавритания', 'Новая Зеландия', 'Перу', 'Гайана', 'Индия', 'Ирак', 'Китай', 'Беларусь', 
-'Конго', 'Исландия', 'Сан Томе и Принсипи', 'Таджикистан', 'Болгария', 'Микронезия', 'Ливан', 'Иран', 'Коморы', 'Парагвай', 'Науру', 'Папуа Новая Гвинея', 'Сан Марино', 'Мьянма', 'Панама',
-'Малайзия', 'Восточный Тимор', 'Австрия', 'Зимбабве', 'Йемен', 'Буркина Фасо', 'Словакия', 'Кипр', 'Тринидад и Тобаго', 'Косово', 'Мозамбик', 'Чили', 'Литва', 'Бельгия', 'Хорватия',
-'Гвинея', 'Либерия', 'Коста Рика', 'Палау', 'Камерун', 'Латвия', 'Сенегал', 'Катар', 'Казахстан', 'США',
-'Германия', 'Франция', 'Объединенные Арабские Эмираты', 'Бахрейн', 'Сент Китс и Невис', 'Южная Осетия', 'Словения', 'Бангладеш', 'Южная Корея', 'Бурунди', 'Финляндия', 'Южная Африка', 
-'Таиланд', 'Марокко', 'Маврикий', 'Саудовская Аравия', 'Канада', 'Кабо Верде', 'Пакистан', 'Габон', 'Сьерра Леоне', 'Белиз', 'Мальдивы', 'Намибия', 'Сомали', 'Туркменистан', 
-'Греция', 'Эквадор', 'Гренада', 'Ватикан', 'Андорра', 'Эритрея', 'Кувейт', 'Норвегия', 'Гамбия', 'Мексика', 'Судан', 'Оман', 'Суринам', 'Иордания', 'Турция', 'Фиджи', 'Доминика', 'Непал', 
-'Грузия', 'Джибути', 'Северная Корея', 'Гондурас', 'Тайвань', 'Израиль', 'Чад', 'Сент Винсент и Гренадины', 'Уганда', 'Армения', 'Польша', 'Венгрия', 'Чехия', 'Швейцария', 'Шри Ланка', 
-'Ботсвана', 'Сингапур', 'Гватемала', 'Монако', 'Венесуэла', 'Южный Судан', 'Афганистан', 'Украина', 'Лаос', 'Испания', 'Нигер', 'Камбоджа', 'Аргентина', 
-'Румыния', 'Багамы', 'Того', 'Гана', 'Уругвай', 'Гаити', 'Барбадос', 'Молдова', 'Россия', 'Алжир', 'Швеция', 'Танзания', 'Тонга', 'Никарагуа', 'Куба', 'Соломоновы Острова', 'Узбекистан', 
-'Малави', 'Вануату', 'Сальвадор', 'Ангола', 'Сербия', 'Кирибати', 'Северная Македония', 'Антигуа и Барбуда', 'Босния и Герцеговина', 'Люксембург', 'Сирия', 'Тунис', 'Лесото', 'Бутан',
-'Мадагаскар', 'Индонезия', 'Бруней', 'Ливия', 'Дания', 'Мали', 'Нидерланды', 'Кения', 'Вьетнам', 'Бразилия', 'Эфиопия', 'Самоа', 'Бенин', 'Киргизия', 'Колумбия', 'Абхазия']
+export const answers =
+  ['Нигерия', 'Ирландия', 'Маршалловы Острова', 'Португалия', 'Австралия', 'Гвинея Бисау', 'Италия', 'Япония', 'Ямайка', 'Лихтенштейн', 'Азербайджан', 'Боливия', 'Египет', 'Албания',
+    'Замбия', 'Сейшелы', 'Тувалу', 'Монголия', 'Руанда', 'Мальта', 'Филиппины', 'Эстония', 'Черногория', 'Мавритания', 'Новая Зеландия', 'Перу', 'Гайана', 'Индия', 'Ирак', 'Китай', 'Беларусь',
+    'Конго', 'Исландия', 'Сан Томе и Принсипи', 'Таджикистан', 'Болгария', 'Микронезия', 'Ливан', 'Иран', 'Коморы', 'Парагвай', 'Науру', 'Папуа Новая Гвинея', 'Сан Марино', 'Мьянма', 'Панама',
+    'Малайзия', 'Восточный Тимор', 'Австрия', 'Зимбабве', 'Йемен', 'Буркина Фасо', 'Словакия', 'Кипр', 'Тринидад и Тобаго', 'Косово', 'Мозамбик', 'Чили', 'Литва', 'Бельгия', 'Хорватия',
+    'Гвинея', 'Либерия', 'Коста Рика', 'Палау', 'Камерун', 'Латвия', 'Сенегал', 'Катар', 'Казахстан', 'США',
+    'Германия', 'Франция', 'Объединенные Арабские Эмираты', 'Бахрейн', 'Сент Китс и Невис', 'Южная Осетия', 'Словения', 'Бангладеш', 'Южная Корея', 'Бурунди', 'Финляндия', 'Южная Африка',
+    'Таиланд', 'Марокко', 'Маврикий', 'Саудовская Аравия', 'Канада', 'Кабо Верде', 'Пакистан', 'Габон', 'Сьерра Леоне', 'Белиз', 'Мальдивы', 'Намибия', 'Сомали', 'Туркменистан',
+    'Греция', 'Эквадор', 'Гренада', 'Ватикан', 'Андорра', 'Эритрея', 'Кувейт', 'Норвегия', 'Гамбия', 'Мексика', 'Судан', 'Оман', 'Суринам', 'Иордания', 'Турция', 'Фиджи', 'Доминика', 'Непал',
+    'Грузия', 'Джибути', 'Северная Корея', 'Гондурас', 'Тайвань', 'Израиль', 'Чад', 'Сент Винсент и Гренадины', 'Уганда', 'Армения', 'Польша', 'Венгрия', 'Чехия', 'Швейцария', 'Шри Ланка',
+    'Ботсвана', 'Сингапур', 'Гватемала', 'Монако', 'Венесуэла', 'Южный Судан', 'Афганистан', 'Украина', 'Лаос', 'Испания', 'Нигер', 'Камбоджа', 'Аргентина',
+    'Румыния', 'Багамы', 'Того', 'Гана', 'Уругвай', 'Гаити', 'Барбадос', 'Молдова', 'Россия', 'Алжир', 'Швеция', 'Танзания', 'Тонга', 'Никарагуа', 'Куба', 'Соломоновы Острова', 'Узбекистан',
+    'Малави', 'Вануату', 'Сальвадор', 'Ангола', 'Сербия', 'Кирибати', 'Северная Македония', 'Антигуа и Барбуда', 'Босния и Герцеговина', 'Люксембург', 'Сирия', 'Тунис', 'Лесото', 'Бутан',
+    'Мадагаскар', 'Индонезия', 'Бруней', 'Ливия', 'Дания', 'Мали', 'Нидерланды', 'Кения', 'Вьетнам', 'Бразилия', 'Эфиопия', 'Самоа', 'Бенин', 'Киргизия', 'Колумбия', 'Абхазия']
 
 let usedFlagIndexes = [];
 
 export function getRandomQuestionIndex() {
   let randomIndex;
-  
+
   do {
     randomIndex = Math.floor(Math.random() * flagsData.length);
   } while (usedFlagIndexes.includes(randomIndex));
-  
+
   usedFlagIndexes.push(randomIndex);
 
   const question = flagsData[randomIndex];
-  
+
   if (question.options.length > 0) {
     question.options = [];
   }
-  
+
   const answerOptions = [...answers]; // создаем копию массива с ответами
-  
+
   // Удаляем верный ответ из списка вариантов, чтобы он не был выбран дважды
   const correctAnswerIndex = answerOptions.indexOf(question.correctAnswer);
   answerOptions.splice(correctAnswerIndex, 1);
-  
+
   // Выбираем три случайных варианта ответа из оставшихся
   for (let i = 0; i < 3; i++) {
     const randomOptionIndex = Math.floor(Math.random() * answerOptions.length);
@@ -1023,11 +1018,11 @@ export function getRandomQuestionIndex() {
     question.options.push(randomOption);
     answerOptions.splice(randomOptionIndex, 1);
   }
-  
+
   // Добавляем верный ответ в список вариантов
   const correctAnswerPosition = Math.floor(Math.random() * 4); // случайная позиция для верного ответа
   question.options.splice(correctAnswerPosition, 0, question.correctAnswer);
-  
+
   return randomIndex;
 }
 
