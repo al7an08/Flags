@@ -43,7 +43,7 @@
   /* Added property */
 }
 
-@media (min-width: 1900px) {
+@media (min-width: 1920px) {
   .button:focus {
     outline: none;
     border: 20px solid white;
