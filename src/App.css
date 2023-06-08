@@ -267,6 +267,7 @@
     left: 0;
     width: fit-content;
     margin-right: 1vh;
+    margin-top: 1%;
   }
 
   .score {
@@ -274,6 +275,7 @@
     left: 50vw;
     width: fit-content;
     margin-right: 1vh;
+    margin-top: 1%
   }
 }
 
