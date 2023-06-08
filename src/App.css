@@ -46,6 +46,7 @@
 @media (min-width: 1920px) {
   .button:focus {
     outline: white 1vh solid;
+    border-radius: 10px;
   }
 
   .button:hover {
@@ -99,16 +100,17 @@
     white-space: nowrap;
     white-space: normal;
   }
+
+  .button:hover {
+    background-position: right center;
+    /* background-image: linear-gradient(to right, #336c5c 0%, #2c1a4c 51%, #32a8a0 100%); */
+    border: white 1vh solid;
+  }
+
 }
 
 .button:active {
   background-image: linear-gradient(to right, #336c5c 0%, #2c1a4c 51%, #32a8a0 100%);
-}
-
-.button:hover {
-  background-position: right center;
-  /* background-image: linear-gradient(to right, #336c5c 0%, #2c1a4c 51%, #32a8a0 100%); */
-  border: white 1vh solid;
 }
 
 .button:disabled {
