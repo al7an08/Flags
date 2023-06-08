@@ -263,16 +263,19 @@
 
 @media (max-width: 1100px) {
   .currentQuestion {
-    font-size: 17px; /* Set the desired font size when the width is 1080px */
-    left: 0vw; /* Adjust the value as needed */
+    font-size: 17px;
+    left: 0;
+    width: fit-content;
+    margin-right: 1vh;
   }
 
   .score {
-    font-size: 17px; /* Set the desired font size when the width is 1080px */
-    left: 50vw; /* Adjust the value as needed */
+    font-size: 17px;
+    left: 50vw;
+    width: fit-content;
+    margin-right: 1vh;
   }
 }
-
 
 .menuButton {
   position: fixed;
