@@ -133,7 +133,8 @@
   align-items: center;
   width: 90%;
   padding-top: 0;
-  margin-top: 0;
+  /*margin-top: 0;*/
+  margin-top: 10vh; /* Adjust the value as needed */
 }
 
 .wrapper {
@@ -230,8 +231,9 @@
   margin-top: 0.5vh;
   padding-bottom: 0;
   margin-bottom: 0;
+  margin-right: 5vw; 
   position: fixed;
-  top: 0;
+  top: 2vh; /* Adjust the value as needed */
   left: 2vw; /* Adjust the value as needed */
   margin: 2vh 0;
 }
@@ -254,16 +256,16 @@
   margin-bottom: 0;
   padding-bottom: 0;
   position: fixed;
-  top: 0;
-  left: 25vw; /* Adjust the value as needed */
+  top: 2vh; /* Adjust the value as needed */
+  left: 35vw; /* Adjust the value as needed */
   margin: 2vh 0;
 }
 
 
 .menuButton {
   position: fixed;
-  top: 10px;
-  right: 10px;
+  top: 2vh; /* Adjust the value as needed */
+  right: 2vh; /* Adjust the value as needed */
   width: 20vw;
   height: 10vh;
   text-decoration: none;
