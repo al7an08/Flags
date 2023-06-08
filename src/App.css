@@ -230,6 +230,10 @@
   margin-top: 0.5%;
   padding-bottom: 0;
   margin-bottom: 0;
+  position: fixed;
+  top: 0;
+  left: 10px;
+  margin: 10px 0;
 }
 
 .score {
@@ -249,6 +253,46 @@
   margin-top: 0.5%;
   margin-bottom: 0;
   padding-bottom: 0;
+  position: fixed;
+  top: 0;
+  left: 250px; /* Adjust the value as needed */
+  margin: 10px 0;
+}
+
+.menuButton {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  width: 20vw;
+  height: 10vh;
+  text-decoration: none;
+  display: inline-block;
+  color: white;
+  padding: 0;
+  margin: 1% 1vw;
+  border-radius: 10px;
+  font-size: 200%;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 2px;
+  background-image: linear-gradient(to right, #4fdfc7 0%, #4830F0 51%, #47e4ca 100%);
+  background-size: 200% auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+  transition: .5s;
+  overflow: hidden;
+  white-space: break-spaces;
+}
+
+.menuButton:focus {
+  outline: 5px solid white;
+  box-shadow: 0 0 3pt 2pt white;
+  background-position: right center;
+}
+
+.menuButton:hover {
+  border: 0 none #0083ff;
 }
 
 .answer-block {

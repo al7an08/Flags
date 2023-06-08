@@ -47,6 +47,7 @@ export class App extends React.Component {
     this.handleShowMenu = this.handleShowMenu.bind(this);
     this.handleStartPage = this.handleStartPage.bind(this);
     this.generate_current_question = this.generate_current_question.bind(this);
+    //this.handleMenuClick = this.handleMenuClick.bind(this);
 
     this.state = {
       currentQuestionIndex: 0,
@@ -371,6 +372,7 @@ export class App extends React.Component {
             score={this.state.score}
             handleOptionClick={this.handleOptionClick}
             answer_received={this.state.answer_received}
+            handleStartPage = {this.handleStartPage}
           />
         ) : (
           <GameOverPage score={this.state.score} handleRestartClick={this.handleRestartClick} />
