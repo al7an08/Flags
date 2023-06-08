@@ -261,6 +261,18 @@
   margin: 2vh 0;
 }
 
+@media (min-width: 1080px) {
+  .currentQuestion {
+    font-size: 40px; /* Set the desired font size when the width is 1080px */
+    left: 0vw; /* Adjust the value as needed */
+  }
+
+  .score {
+    font-size: 40px; /* Set the desired font size when the width is 1080px */
+    left: 40vw; /* Adjust the value as needed */
+  }
+}
+
 
 .menuButton {
   position: fixed;
