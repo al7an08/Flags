@@ -43,6 +43,14 @@
   /* Added property */
 }
 
+@media (min-width: 1920px) {
+  .button:focus {
+    outline: none;
+    border: white 1vh solid;
+  }
+}
+
+
 @media (max-width: 1280px) {
   .button {
     width: 47vw;
@@ -337,8 +345,4 @@
   align-self: center;
   justify-self: center;
   margin: 3% auto;
-}
-
-:focus {
-  outline: none;
 }
