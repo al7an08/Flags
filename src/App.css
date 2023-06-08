@@ -223,17 +223,17 @@
   box-shadow: 0 0 20px rgba(0, 0, 0, .1);
   letter-spacing: 2px;
   text-align: center;
-  font-size: 1.3rem;
+  font-size: 2vw; /* Adjust the font size based on the screen size */
   font-weight: bold;
   white-space: normal;
   word-break: keep-all;
-  margin-top: 0.5%;
+  margin-top: 0.5vh;
   padding-bottom: 0;
   margin-bottom: 0;
   position: fixed;
   top: 0;
-  left: 10px;
-  margin: 10px 0;
+  left: 2vw; /* Adjust the value as needed */
+  margin: 2vh 0;
 }
 
 .score {
@@ -246,18 +246,19 @@
   box-shadow: 0 0 20px rgba(0, 0, 0, .1);
   letter-spacing: 2px;
   text-align: center;
-  font-size: 1.3rem;
+  font-size: 2vw; /* Adjust the font size based on the screen size */
   font-weight: bold;
   white-space: normal;
   word-break: keep-all;
-  margin-top: 0.5%;
+  margin-top: 0.5vh;
   margin-bottom: 0;
   padding-bottom: 0;
   position: fixed;
   top: 0;
-  left: 250px; /* Adjust the value as needed */
-  margin: 10px 0;
+  left: 25vw; /* Adjust the value as needed */
+  margin: 2vh 0;
 }
+
 
 .menuButton {
   position: fixed;
@@ -271,7 +272,7 @@
   padding: 0;
   margin: 1% 1vw;
   border-radius: 10px;
-  font-size: 200%;
+  font-size: 4vw; /* Adjust the font size based on the screen size */
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
   text-transform: uppercase;
