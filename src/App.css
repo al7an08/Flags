@@ -136,6 +136,9 @@
     white-space: normal;
   }
 
+  .info {
+    width: 100vw;
+  }
 
   .button:active {
     border: white 1vh solid;
