@@ -136,10 +136,21 @@
     white-space: normal;
   }
 
-  .button:hover {
-    background-position: right center;
-    /* background-image: linear-gradient(to right, #336c5c 0%, #2c1a4c 51%, #32a8a0 100%); */
+
+  .button:active {
     border: white 1vh solid;
+    background-position: right center;
+    background-image: linear-gradient(to right, #336c5c 0%, #2c1a4c 51%, #32a8a0 100%);
+  }
+
+  .score {
+    width: max-content;
+    height: min-content;
+  }
+
+  .currentQuestion {
+    width: max-content;
+    height: min-content;
   }
 
   .menuButton {
