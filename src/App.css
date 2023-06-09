@@ -81,6 +81,14 @@
     /* background-image: linear-gradient(to right, #336c5c 0%, #2c1a4c 51%, #32a8a0 100%); */
     border: 0 none #0083ff;
   }
+
+  .menuButton:focus {
+    outline: 5px solid white;
+    box-shadow: 0 0 3pt 2pt white;
+    /* border: 20px solid white; */
+    background-position: right center;
+  }
+
 }
 
 
@@ -134,6 +142,28 @@
     border: white 1vh solid;
   }
 
+  .menuButton {
+    width: max-content;
+    height: min-content;
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    /* padding: 20px 30px; */
+    padding: 0;
+    margin: 10px 1vw;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    white-space: normal;
+    word-break: keep-all;
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 100%;
+    background-image: linear-gradient(to right, #9EEFE1 0%, #4830F0 51%, #9EEFE1 100%);
+    background-size: 200% auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+    transition: .5s;
+  }
 }
 
 .button:active {
