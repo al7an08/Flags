@@ -136,47 +136,88 @@
     white-space: normal;
   }
 
-  .info {
-    width: 100vw;
-  }
-
-  .button:active {
-    border: white 1vh solid;
-    background-position: right center;
-    background-image: linear-gradient(to right, #336c5c 0%, #2c1a4c 51%, #32a8a0 100%);
+  .currentQuestion {
+    margin-right: 1vh;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 0.5vh;
+    background-image: linear-gradient(90deg, #3bb52a, #00ae85, #009ee4, #0083ff, #3b41f9);
+    font-family: 'Montserrat', sans-serif;
+    background-size: 200% auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+    letter-spacing: 2px;
+    text-align: center;
+    font-size: 4vw;
+    /* Adjust the font size based on the screen size */
+    font-weight: bold;
+    white-space: normal;
+    word-break: keep-all;
+    margin-top: 0.5vh;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    margin-right: 5vw;
+    position: fixed;
+    top: 0vh;
+    /* Adjust the value as needed */
+    left: 2vw;
+    /* Adjust the value as needed */
+    margin: 2vh 0;
   }
 
   .score {
-    width: max-content;
-    height: min-content;
-  }
-
-  .currentQuestion {
-    width: max-content;
-    height: min-content;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 0.5vh;
+    background-image: linear-gradient(90deg, #3bb52a, #00ae85, #009ee4, #0083ff, #3b41f9);
+    font-family: 'Montserrat', sans-serif;
+    background-size: 200% auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+    letter-spacing: 2px;
+    text-align: center;
+    font-size: 4vw;
+    /* Adjust the font size based on the screen size */
+    font-weight: bold;
+    white-space: normal;
+    word-break: keep-all;
+    margin-top: 0.5vh;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    position: fixed;
+    top: 0vh;
+    /* Adjust the value as needed */
+    left: 50vw;
+    /* Adjust the value as needed */
+    margin: 2vh 0;
   }
 
   .menuButton {
-    width: max-content;
-    height: min-content;
+    position: fixed;
+    top: 1.5vh;
+    /* Adjust the value as needed */
+    right: 1.5vh;
+    /* Adjust the value as needed */
+
+    width: 20vw;
+    height: 7vw;
     text-decoration: none;
     display: inline-block;
     color: white;
-    /* padding: 20px 30px; */
     padding: 0;
-    margin: 10px 1vw;
+    margin: 1% 1vw;
     border-radius: 10px;
+    font-size: 5vw;
+    /* Adjust the font size based on the screen size */
     font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
     text-transform: uppercase;
-    white-space: normal;
-    word-break: keep-all;
     text-align: center;
     letter-spacing: 2px;
-    font-size: 100%;
-    background-image: linear-gradient(to right, #9EEFE1 0%, #4830F0 51%, #9EEFE1 100%);
+    background-image: linear-gradient(to right, #4fdfc7 0%, #4830F0 51%, #47e4ca 100%);
     background-size: 200% auto;
     box-shadow: 0 0 20px rgba(0, 0, 0, .1);
     transition: .5s;
+    overflow: hidden;
+    white-space: break-spaces;
   }
 }
 
