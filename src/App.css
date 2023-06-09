@@ -192,6 +192,7 @@
   }
 
   .restartButton {
+    width: 50vw;
     text-decoration: none;
     display: inline-block;
     color: white;
