@@ -196,6 +196,7 @@
     font-size: 4vw;
     white-space: normal;
     word-break: keep-all;
+    padding: 0;
   }
 
   .currentQuestion {
@@ -203,10 +204,11 @@
     width: max-content;
     white-space: normal;
     word-break: keep-all;
+    padding: 0;
   }
 
   .menuButton {
-    width: 20vh;
+    width: max-content;
     text-decoration: none;
     display: inline-block;
     color: white;
