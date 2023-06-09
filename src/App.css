@@ -7,6 +7,14 @@
   padding-top: 0;
 }
 
+.info {
+  display: flex;
+  flex-direction: row;
+  height: min-content;
+  width: 100%;
+  justify-content: space-around;
+}
+
 .currentQuestion {
   border: 1px solid white;
   border-radius: 10px;
@@ -176,13 +184,25 @@
     white-space: normal;
   }
 
+  .info {
+    display: flex;
+    flex-direction: row;
+    height: min-content;
+    width: 100%;
+    justify-content: space-between;
+  }
+
   .score {
     width: 35vw;
     font-size: 4vw;
+    white-space: normal;
+    word-break: keep-all;
   }
 
   .currentQuestion {
     font-size: 4vw;
+    white-space: normal;
+    word-break: keep-all;
   }
 
   .menuButton {
@@ -245,14 +265,6 @@
 }
 
 
-.info {
-  display: flex;
-  flex-direction: row;
-  height: min-content;
-
-  width: 100%;
-  justify-content: space-around;
-}
 
 
 .gameOverPage {
