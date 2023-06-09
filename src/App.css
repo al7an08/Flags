@@ -178,6 +178,11 @@
 
   .score {
     width: 35vw;
+    font-size: 4vw;
+  }
+
+  .currentQuestion {
+    font-size: 4vw;
   }
 
   .menuButton {
