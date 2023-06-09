@@ -7,6 +7,46 @@
   padding-top: 0;
 }
 
+.currentQuestion {
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 0.5vh;
+  background-image: linear-gradient(90deg, #3bb52a, #00ae85, #009ee4, #0083ff, #3b41f9);
+  font-family: 'Montserrat', sans-serif;
+  background-size: 200% auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+  letter-spacing: 2px;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+  white-space: normal;
+  word-break: keep-all;
+  margin-top: 0.5%;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.score {
+  border: 1px solid white;
+  width: 10vw;
+  border-radius: 10px;
+  padding: 0.5vh;
+  background-image: linear-gradient(90deg, #3bb52a, #00ae85, #009ee4, #0083ff, #3b41f9);
+  font-family: 'Montserrat', sans-serif;
+  background-size: 200% auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+  letter-spacing: 2px;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+  white-space: normal;
+  word-break: keep-all;
+  margin-top: 0.5%;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  justify-self: center;
+}
+
 .answers {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -250,45 +290,6 @@
   align-items: center;
 }
 
-.currentQuestion {
-  border: 1px solid white;
-  border-radius: 10px;
-  padding: 0.5vh;
-  background-image: linear-gradient(90deg, #3bb52a, #00ae85, #009ee4, #0083ff, #3b41f9);
-  font-family: 'Montserrat', sans-serif;
-  background-size: 200% auto;
-  box-shadow: 0 0 20px rgba(0, 0, 0, .1);
-  letter-spacing: 2px;
-  text-align: center;
-  font-size: 1.3rem;
-  font-weight: bold;
-  white-space: normal;
-  word-break: keep-all;
-  margin-top: 0.5%;
-  padding-bottom: 0;
-  margin-bottom: 0;
-}
-
-.score {
-  border: 1px solid white;
-  width: 10vw;
-  border-radius: 10px;
-  padding: 0.5vh;
-  background-image: linear-gradient(90deg, #3bb52a, #00ae85, #009ee4, #0083ff, #3b41f9);
-  font-family: 'Montserrat', sans-serif;
-  background-size: 200% auto;
-  box-shadow: 0 0 20px rgba(0, 0, 0, .1);
-  letter-spacing: 2px;
-  text-align: center;
-  font-size: 1.3rem;
-  font-weight: bold;
-  white-space: normal;
-  word-break: keep-all;
-  margin-top: 0.5%;
-  margin-bottom: 0;
-  padding-bottom: 0;
-  justify-self: center;
-}
 
 .answer-block {
   position: fixed;
