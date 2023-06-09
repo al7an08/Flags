@@ -189,11 +189,10 @@
     flex-direction: row;
     height: min-content;
     width: 100%;
-    justify-content: space-between;
   }
 
   .score {
-    width: 35vw;
+    width: max-content;
     font-size: 4vw;
     white-space: normal;
     word-break: keep-all;
@@ -201,6 +200,7 @@
 
   .currentQuestion {
     font-size: 4vw;
+    width: max-content;
     white-space: normal;
     word-break: keep-all;
   }
