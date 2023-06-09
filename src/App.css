@@ -193,14 +193,14 @@
 
   .score {
     width: max-content;
-    font-size: 4vw;
+    font-size: 5vw;
     white-space: normal;
     word-break: keep-all;
     padding: 0;
   }
 
   .currentQuestion {
-    font-size: 4vw;
+    font-size: 5vw;
     width: max-content;
     white-space: normal;
     word-break: keep-all;
