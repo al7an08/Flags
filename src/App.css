@@ -117,6 +117,33 @@
   /* Added property */
 }
 
+
+.restartButton {
+  width: 50vw;
+  word-break: break-word;
+  height: 13vh;
+  text-decoration: none;
+  display: inline-block;
+  color: white;
+  padding: 0;
+  margin: 1% 1vw;
+  border-radius: 10px;
+  font-size: 200%;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 2px;
+  background-image: linear-gradient(to right, #4fdfc7 0%, #4830F0 51%, #47e4ca 100%);
+  background-size: 200% auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+  transition: .5s;
+  overflow: hidden;
+  /* Added property */
+  white-space: break-spaces;
+  /* Added property */
+}
+
 @media (min-width: 1920px) {
   .button:focus {
     outline: 5px solid white;
