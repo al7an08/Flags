@@ -7,9 +7,9 @@ const QuestionPage = (props) => {
   return (
     <div className='questionPage'>
       <div className='info'>
-        <button className='menuButton' onClick={handleStartPage}>Меню</button> {/* Added menu button */}
+        <p className='score'>{`Счёт: ${score}`}</p>
         <p className='currentQuestion'>{`Вопрос номер: ${currentQuestion}`}</p>
-        <p className='score'>{`Счёт ${score}`}</p>
+        <button className='menuButton' onClick={handleStartPage}>Меню</button>
       </div>
       <Question question={question} handleOptionClick={handleOptionClick} answer_received={answer_received} />
     </div>
