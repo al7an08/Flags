@@ -35,7 +35,7 @@ const MenuPage = (props) => {
         />
       </StepperRoot>
       <button autoFocus={true} className='button' onClick={handleStartGame}>Продолжить</button>
-      <button className='button' onClick={handleStartPage}>Главное меню</button>
+      <button className='button' onClick={handleStartPage}>Вернуться</button>
     </div>
   )
 }
