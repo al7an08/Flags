@@ -44,7 +44,7 @@ const Question = ({ handleOptionClick, question, answer_received }) => {
       setButtonColored(true);
       setTimeout(() => {
         setButtonColored(false);
-      }, 2950);
+      }, 2700);
     }
   })
 
