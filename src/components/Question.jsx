@@ -15,6 +15,7 @@ const Question = ({ handleOptionClick, question, answer_received }) => {
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
   const [buttonRef, setButtonFocus] = useFocus()
   const [buttonColored, setButtonColored] = useState(false);
+  const [buttonColoredCheck, setButtonColoredCheck] = useState(false);
 
   const handleButtonClick = (isCorrect) => {
     handleOptionClick(isCorrect);
@@ -22,12 +23,13 @@ const Question = ({ handleOptionClick, question, answer_received }) => {
     setButtonFocus();
     setIsButtonDisabled(true);
     setButtonColored(true);
+    setButtonColoredCheck(true);
     setTimeout(() => {
       setIsButtonDisabled(false);
     }, 3000);
     setTimeout(() => {
       setButtonColored(false);
-    }, 2700);
+    }, 3000);
   };
 
 
@@ -42,9 +44,11 @@ const Question = ({ handleOptionClick, question, answer_received }) => {
         setIsButtonDisabled(false);
       }, 3000)
       setButtonColored(true);
-      setTimeout(() => {
-        setButtonColored(false);
-      }, 2700);
+      setButtonColoredCheck(false);
+    }
+    else if (!buttonColoredCheck) {
+      setButtonColored(false);
+      setButtonColoredCheck(false)
     }
   })
 
