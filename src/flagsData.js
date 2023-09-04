@@ -503,12 +503,12 @@ export const flagsData = [
   },
   {
     flagUrl: url + 'mw.png',
-    correctAnswer: 'Малави',
+    correctAnswer: 'Малайзия',
     options: []
   },
   {
     flagUrl: url + 'my.png',
-    correctAnswer: 'Малайзия',
+    correctAnswer: 'Малави',
     options: []
   },
   {
